@@ -49,61 +49,35 @@
 
     #root { height: 100%; display: flex; flex-direction: column; max-width: 430px; margin: 0 auto; position: relative; background: var(--bg); }
 
-    /* ===== 滚动容器 ===== */
     .page-scroll {
-      flex: 1;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
+      flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch;
       padding-bottom: calc(var(--nav-h) + var(--safe-bottom) + 16px);
     }
     .page-scroll::-webkit-scrollbar { display: none; }
 
-    /* ===== 底部导航 ===== */
     .bottom-nav {
-      position: fixed;
-      bottom: 0; left: 50%; transform: translateX(-50%);
+      position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
       width: 100%; max-width: 430px;
       height: calc(var(--nav-h) + var(--safe-bottom));
-      background: white;
-      border-top: 1px solid var(--border);
-      display: flex;
-      align-items: flex-start;
-      padding-top: 8px;
-      z-index: 100;
-      box-shadow: 0 -2px 12px rgba(0,0,0,0.04);
+      background: white; border-top: 1px solid var(--border);
+      display: flex; align-items: flex-start; padding-top: 8px;
+      z-index: 100; box-shadow: 0 -2px 12px rgba(0,0,0,0.04);
     }
-    .nav-item {
-      flex: 1; display: flex; flex-direction: column; align-items: center;
-      gap: 3px; cursor: pointer; padding: 4px 0;
-      transition: all 0.2s;
-    }
+    .nav-item { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; cursor: pointer; padding: 4px 0; transition: all 0.2s; }
     .nav-icon { font-size: 22px; line-height: 1; }
     .nav-label { font-size: 11px; color: var(--text-3); font-weight: 500; }
     .nav-item.active .nav-label { color: var(--primary); font-weight: 600; }
     .nav-item.active .nav-icon { transform: scale(1.1); }
 
-    /* ===== 顶部标题栏 ===== */
-    .page-header {
-      padding: 16px 20px 12px;
-      background: white;
-      position: sticky; top: 0; z-index: 50;
-    }
+    .page-header { padding: 16px 20px 12px; background: white; position: sticky; top: 0; z-index: 50; }
     .page-title { font-size: 20px; font-weight: 700; color: var(--text); }
     .page-subtitle { font-size: 13px; color: var(--text-3); margin-top: 2px; }
 
-    /* ===== 通用卡片 ===== */
-    .card {
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
+    .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); }
 
-    /* ===== 按钮 ===== */
     .btn-primary {
-      background: var(--primary);
-      color: white; border: none; border-radius: 24px;
-      font-size: 15px; font-weight: 600;
-      padding: 12px 28px; cursor: pointer;
+      background: var(--primary); color: white; border: none; border-radius: 24px;
+      font-size: 15px; font-weight: 600; padding: 12px 28px; cursor: pointer;
       transition: all 0.2s; width: 100%;
     }
     .btn-primary:active { opacity: 0.85; transform: scale(0.98); }
@@ -111,54 +85,30 @@
     .btn-outline {
       background: transparent; color: var(--primary);
       border: 1.5px solid var(--primary); border-radius: 24px;
-      font-size: 14px; font-weight: 500;
-      padding: 8px 20px; cursor: pointer;
+      font-size: 14px; font-weight: 500; padding: 8px 20px; cursor: pointer;
     }
 
-    /* ===== 标签/Tab ===== */
-    .tab-bar {
-      display: flex; gap: 8px;
-      padding: 0 20px 12px;
-      overflow-x: auto; -webkit-overflow-scrolling: touch;
-    }
+    .tab-bar { display: flex; gap: 8px; padding: 0 20px 12px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .tab-bar::-webkit-scrollbar { display: none; }
     .tab-chip {
-      flex-shrink: 0; padding: 6px 16px;
-      border-radius: 20px; font-size: 13px; font-weight: 500;
-      cursor: pointer; transition: all 0.2s;
-      background: white; color: var(--text-2);
-      border: 1.5px solid var(--border);
+      flex-shrink: 0; padding: 6px 16px; border-radius: 20px;
+      font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s;
+      background: white; color: var(--text-2); border: 1.5px solid var(--border);
     }
-    .tab-chip.active {
-      background: var(--primary); color: white;
-      border-color: var(--primary);
-    }
+    .tab-chip.active { background: var(--primary); color: white; border-color: var(--primary); }
 
-    /* ===== 搜索框 ===== */
     .search-bar {
-      margin: 12px 20px;
-      background: white; border-radius: 24px;
-      display: flex; align-items: center;
-      padding: 10px 16px; gap: 8px;
+      margin: 12px 20px; background: white; border-radius: 24px;
+      display: flex; align-items: center; padding: 10px 16px; gap: 8px;
       box-shadow: var(--shadow);
     }
-    .search-bar input {
-      flex: 1; border: none; outline: none;
-      font-size: 15px; color: var(--text);
-      background: transparent;
-    }
+    .search-bar input { flex: 1; border: none; outline: none; font-size: 15px; color: var(--text); background: transparent; }
     .search-bar input::placeholder { color: var(--text-3); }
 
-    /* ===== 菜品双列网格 ===== */
-    .dish-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 12px; padding: 0 20px 12px;
-    }
+    .dish-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 20px 12px; }
     .dish-card {
-      background: white; border-radius: var(--radius);
-      overflow: hidden; box-shadow: var(--shadow);
-      transition: transform 0.15s;
-      position: relative;
+      background: white; border-radius: var(--radius); overflow: hidden;
+      box-shadow: var(--shadow); transition: transform 0.15s; position: relative;
     }
     .dish-card:active { transform: scale(0.97); }
     .dish-img {
@@ -185,8 +135,7 @@
     .vote-btn:active { transform: scale(0.92); }
     .btn-add {
       width: 28px; height: 28px; border-radius: 50%;
-      background: var(--primary); color: white;
-      border: none; font-size: 18px; cursor: pointer;
+      background: var(--primary); color: white; border: none; font-size: 18px; cursor: pointer;
       display: flex; align-items: center; justify-content: center;
       transition: all 0.2s; line-height: 1; flex-shrink: 0;
     }
@@ -194,9 +143,8 @@
     .btn-add:active { transform: scale(0.88); }
     .dish-badge {
       position: absolute; top: 8px; right: 8px;
-      background: var(--primary); color: white;
-      border-radius: 10px; font-size: 11px; font-weight: 700;
-      padding: 2px 7px; z-index: 2;
+      background: var(--primary); color: white; border-radius: 10px;
+      font-size: 11px; font-weight: 700; padding: 2px 7px; z-index: 2;
     }
     .dish-recent-warn {
       position: absolute; top: 8px; left: 8px;
@@ -212,12 +160,11 @@
     }
     .dish-i-want {
       position: absolute; bottom: 0; left: 0; right: 0;
-      background: rgba(82, 196, 26, 0.92);
-      color: white; font-size: 10px; font-weight: 600;
+      background: rgba(82, 196, 26, 0.92); color: white;
+      font-size: 10px; font-weight: 600;
       text-align: center; padding: 3px 0; z-index: 2;
     }
 
-    /* ===== 口味/辣度小标签 ===== */
     .tag-mini {
       font-size: 10px; padding: 1px 6px; border-radius: 6px;
       background: var(--bg); color: var(--text-2); font-weight: 500;
@@ -228,7 +175,6 @@
     .tag-mini.spicy-3 { background: #FFE4D6; color: #FF6B35; }
     .tag-mini.spicy-4 { background: #FFE0E0; color: #FF4D4F; font-weight: 700; }
 
-    /* ===== 悬浮菜单栏 ===== */
     .float-bar {
       position: fixed; bottom: calc(var(--nav-h) + var(--safe-bottom) + 12px);
       left: 50%; transform: translateX(-50%);
@@ -237,26 +183,22 @@
       padding: 14px 20px; display: flex;
       align-items: center; justify-content: space-between;
       box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-      z-index: 90;
-      animation: slideUp 0.25s ease;
+      z-index: 90; animation: slideUp 0.25s ease;
     }
     @keyframes slideUp { from { transform: translateX(-50%) translateY(20px); opacity: 0; } to { transform: translateX(-50%) translateY(0); opacity: 1; } }
     .float-bar-left { display: flex; align-items: center; gap: 12px; }
     .float-count {
-      background: var(--primary); color: white;
-      border-radius: 50%; width: 26px; height: 26px;
-      font-size: 13px; font-weight: 700;
+      background: var(--primary); color: white; border-radius: 50%;
+      width: 26px; height: 26px; font-size: 13px; font-weight: 700;
       display: flex; align-items: center; justify-content: center;
     }
     .float-label { color: white; font-size: 14px; font-weight: 500; }
     .float-btn {
-      background: var(--primary); color: white;
-      border: none; border-radius: 20px;
-      padding: 8px 20px; font-size: 14px; font-weight: 600;
-      cursor: pointer;
+      background: var(--primary); color: white; border: none;
+      border-radius: 20px; padding: 8px 20px;
+      font-size: 14px; font-weight: 600; cursor: pointer;
     }
 
-    /* ===== 摇一摇按钮（顶部内联按钮，显眼）===== */
     .shake-inline-btn {
       display: inline-flex; align-items: center; gap: 6px;
       background: linear-gradient(135deg, #FF6B35 0%, #FF4D6D 100%);
@@ -268,39 +210,15 @@
     }
     .shake-inline-btn:active { transform: scale(0.92); }
     .shake-inline-btn.shaking span:first-child { animation: shake 0.35s ease infinite; display: inline-block; }
+    @keyframes shake { 0%,100% { transform: rotate(0deg);} 25% { transform: rotate(-15deg);} 75% { transform: rotate(15deg);} }
 
-    /* ===== 摇一摇按钮（右下角悬浮，作为快捷入口）===== */
-    .shake-btn {
-      position: fixed; bottom: calc(var(--nav-h) + var(--safe-bottom) + 80px);
-      right: 20px;
-      width: 54px; height: 54px; border-radius: 50%;
-      background: linear-gradient(135deg, #FF6B35 0%, #FF4D6D 100%);
-      color: white; border: none; cursor: pointer;
-      font-size: 26px;
-      box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
-      display: flex; align-items: center; justify-content: center;
-      z-index: 80;
-      transition: transform 0.2s;
-    }
-    .shake-btn:active { transform: scale(0.9); }
-    .shake-btn.shaking { animation: shake 0.5s ease infinite; }
-    @keyframes shake {
-      0%, 100% { transform: rotate(0deg); }
-      25% { transform: rotate(-15deg); }
-      75% { transform: rotate(15deg); }
-    }
-
-    /* ===== 今日页 ===== */
     .today-hero {
       margin: 16px 20px;
       background: linear-gradient(135deg, #FF6B35 0%, #FF8C5A 100%);
       border-radius: 20px; padding: 24px;
       color: white; position: relative; overflow: hidden;
     }
-    .today-hero::after {
-      content: '🍳'; position: absolute;
-      right: 20px; bottom: 10px; font-size: 64px; opacity: 0.2;
-    }
+    .today-hero::after { content: '🍳'; position: absolute; right: 20px; bottom: 10px; font-size: 64px; opacity: 0.2; }
     .today-date { font-size: 13px; opacity: 0.85; margin-bottom: 4px; }
     .today-title { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
     .today-sub { font-size: 13px; opacity: 0.75; }
@@ -323,29 +241,20 @@
       padding: 14px 16px; display: flex; align-items: center;
       gap: 12px; box-shadow: var(--shadow);
     }
-    .menu-item-emoji { font-size: 28px; }
     .menu-item-name { font-size: 15px; font-weight: 600; flex: 1; }
     .menu-item-cat { font-size: 12px; color: var(--text-3); }
     .remove-btn { background: none; border: none; font-size: 20px; color: var(--text-3); cursor: pointer; padding: 4px; }
-    .empty-state {
-      text-align: center; padding: 60px 20px;
-      color: var(--text-3);
-    }
+    .empty-state { text-align: center; padding: 60px 20px; color: var(--text-3); }
     .empty-state .emoji { font-size: 56px; margin-bottom: 12px; }
     .empty-state p { font-size: 15px; }
-    .section-header {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 16px 20px 10px;
-    }
+    .section-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px 10px; }
     .section-title { font-size: 16px; font-weight: 700; }
     .section-action { font-size: 13px; color: var(--primary); cursor: pointer; }
 
-    /* ===== 双方都想吃推荐区 ===== */
     .both-want-banner {
       margin: 0 20px 12px;
       background: linear-gradient(135deg, #FFE9EE 0%, #FFE4D6 100%);
-      border-radius: var(--radius);
-      padding: 14px 16px;
+      border-radius: var(--radius); padding: 14px 16px;
       border: 1.5px dashed #FF4D6D;
     }
     .both-want-title { font-size: 13px; font-weight: 700; color: #FF4D6D; margin-bottom: 8px; }
@@ -356,11 +265,9 @@
       cursor: pointer; border: 1px solid rgba(255,77,109,0.2);
     }
 
-    /* ===== 食记页 ===== */
     .history-item {
-      margin: 0 20px 12px;
-      background: white; border-radius: var(--radius);
-      box-shadow: var(--shadow); overflow: hidden;
+      margin: 0 20px 12px; background: white;
+      border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden;
     }
     .history-header {
       padding: 14px 16px; display: flex;
@@ -370,39 +277,25 @@
     .history-date { font-size: 14px; font-weight: 700; }
     .history-count { font-size: 12px; color: var(--text-3); }
     .history-dishes { padding: 12px 16px; display: flex; flex-wrap: wrap; gap: 8px; }
-    .dish-tag {
-      background: var(--bg); border-radius: 20px;
-      padding: 4px 12px; font-size: 13px; color: var(--text-2);
-    }
-    .history-rating {
-      padding: 8px 16px 12px;
-      display: flex; align-items: center; gap: 8px;
-      border-top: 1px solid var(--border);
-    }
-    .star-btn {
-      background: none; border: none; cursor: pointer;
-      font-size: 22px; padding: 2px; transition: transform 0.15s;
-      filter: grayscale(1); opacity: 0.4;
-    }
+    .dish-tag { background: var(--bg); border-radius: 20px; padding: 4px 12px; font-size: 13px; color: var(--text-2); }
+    .history-rating { padding: 8px 16px 12px; display: flex; align-items: center; gap: 8px; border-top: 1px solid var(--border); }
+    .star-btn { background: none; border: none; cursor: pointer; font-size: 22px; padding: 2px; transition: transform 0.15s; filter: grayscale(1); opacity: 0.4; }
     .star-btn.filled { filter: none; opacity: 1; }
     .star-btn:active { transform: scale(1.2); }
     .history-rating-label { font-size: 12px; color: var(--text-3); margin-left: 4px; }
 
-    /* ===== 厨房管理页 ===== */
     .kitchen-avatar {
       width: 72px; height: 72px; border-radius: 50%;
       background: var(--primary-soft); font-size: 32px;
       display: flex; align-items: center; justify-content: center;
     }
     .kitchen-card {
-      margin: 0 20px 16px;
-      background: white; border-radius: var(--radius);
-      box-shadow: var(--shadow); overflow: hidden;
+      margin: 0 20px 16px; background: white;
+      border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden;
     }
     .kitchen-row {
-      display: flex; align-items: center;
-      padding: 14px 16px; border-bottom: 1px solid var(--border);
-      gap: 12px; cursor: pointer;
+      display: flex; align-items: center; padding: 14px 16px;
+      border-bottom: 1px solid var(--border); gap: 12px; cursor: pointer;
     }
     .kitchen-row:last-child { border-bottom: none; }
     .kitchen-row-icon { font-size: 20px; width: 32px; text-align: center; }
@@ -410,16 +303,10 @@
     .kitchen-row-arrow { color: var(--text-3); font-size: 16px; }
     .kitchen-row-badge {
       background: var(--primary-soft); color: var(--primary);
-      border-radius: 10px; font-size: 11px; font-weight: 600;
-      padding: 2px 8px;
+      border-radius: 10px; font-size: 11px; font-weight: 600; padding: 2px 8px;
     }
 
-    /* ===== 模态框 ===== */
-    .modal-overlay {
-      position: fixed; inset: 0;
-      background: rgba(0,0,0,0.4); z-index: 200;
-      display: flex; align-items: flex-end;
-    }
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 200; display: flex; align-items: flex-end; }
     .modal-sheet {
       width: 100%; max-width: 430px; margin: 0 auto;
       background: white; border-radius: 24px 24px 0 0;
@@ -427,207 +314,176 @@
       max-height: 85vh; overflow-y: auto;
     }
     .modal-sheet::-webkit-scrollbar { display: none; }
-    .modal-handle {
-      width: 36px; height: 4px; background: var(--border);
-      border-radius: 2px; margin: 0 auto 20px;
-    }
+    .modal-handle { width: 36px; height: 4px; background: var(--border); border-radius: 2px; margin: 0 auto 20px; }
     .modal-title { font-size: 18px; font-weight: 700; margin-bottom: 20px; }
     .input-group { margin-bottom: 16px; }
     .input-label { font-size: 13px; color: var(--text-2); margin-bottom: 6px; }
-    .input-field {
-      width: 100%; background: var(--bg); border: none;
-      border-radius: var(--radius-sm); padding: 12px 16px;
-      font-size: 15px; color: var(--text); outline: none;
-    }
+    .input-field { width: 100%; background: var(--bg); border: none; border-radius: var(--radius-sm); padding: 12px 16px; font-size: 15px; color: var(--text); outline: none; }
     .input-field:focus { box-shadow: 0 0 0 2px var(--primary-soft); }
     .cat-select-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; }
-    .cat-option {
-      border: 1.5px solid var(--border); border-radius: var(--radius-sm);
-      padding: 10px 4px; text-align: center; cursor: pointer;
-      font-size: 12px; font-weight: 500; transition: all 0.2s;
-    }
+    .cat-option { border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 10px 4px; text-align: center; cursor: pointer; font-size: 12px; font-weight: 500; transition: all 0.2s; }
     .cat-option.selected { border-color: var(--primary); background: var(--primary-light); color: var(--primary); }
 
     .spicy-row { display: flex; gap: 6px; flex-wrap: wrap; }
-    .spicy-opt {
-      flex: 1; min-width: 60px;
-      padding: 8px; text-align: center; border-radius: var(--radius-sm);
-      border: 1.5px solid var(--border); cursor: pointer;
-      font-size: 12px; font-weight: 500;
-    }
+    .spicy-opt { flex: 1; min-width: 60px; padding: 8px; text-align: center; border-radius: var(--radius-sm); border: 1.5px solid var(--border); cursor: pointer; font-size: 12px; font-weight: 500; }
     .spicy-opt.selected { border-color: var(--primary); background: var(--primary-light); color: var(--primary); }
 
     .tag-pick-row { display: flex; gap: 6px; flex-wrap: wrap; }
-    .tag-pick {
-      padding: 6px 12px; border-radius: 16px;
-      border: 1.5px solid var(--border); cursor: pointer;
-      font-size: 12px; font-weight: 500; color: var(--text-2);
-      background: white;
-    }
+    .tag-pick { padding: 6px 12px; border-radius: 16px; border: 1.5px solid var(--border); cursor: pointer; font-size: 12px; font-weight: 500; color: var(--text-2); background: white; }
     .tag-pick.selected { border-color: var(--primary); background: var(--primary-light); color: var(--primary); }
 
-    /* ===== 欢迎/引导页 ===== */
-    .onboard {
-      flex: 1; display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      padding: 40px 32px;
-    }
+    .onboard { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 32px; }
     .onboard-logo { font-size: 72px; margin-bottom: 24px; }
     .onboard-title { font-size: 26px; font-weight: 800; margin-bottom: 8px; text-align: center; }
     .onboard-sub { font-size: 15px; color: var(--text-2); text-align: center; margin-bottom: 40px; }
     .onboard-btns { width: 100%; display: flex; flex-direction: column; gap: 12px; }
 
-    /* ===== 标签 ===== */
     .tag-admin { background: var(--primary-light); color: var(--primary); border-radius: 10px; font-size: 11px; font-weight: 600; padding: 2px 8px; }
     .tag-member { background: var(--green-light); color: var(--green); border-radius: 10px; font-size: 11px; font-weight: 600; padding: 2px 8px; }
 
-    /* ===== 吐司提示 ===== */
     .toast {
       position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
       background: rgba(0,0,0,0.75); color: white;
       padding: 10px 24px; border-radius: 24px;
       font-size: 14px; z-index: 500;
       animation: toastIn 0.2s ease, toastOut 0.3s ease 1.8s forwards;
-      white-space: nowrap;
+      white-space: nowrap; max-width: 90vw; overflow: hidden; text-overflow: ellipsis;
     }
     @keyframes toastIn { from { opacity:0; transform: translateX(-50%) translateY(-10px); } to { opacity:1; transform: translateX(-50%) translateY(0); } }
     @keyframes toastOut { to { opacity:0; transform: translateX(-50%) translateY(-10px); } }
 
-    /* ===== 邀请码样式 ===== */
-    .invite-code-box {
-      background: var(--primary-light); border-radius: var(--radius-sm);
-      padding: 16px; text-align: center; margin-bottom: 16px;
-    }
+    .invite-code-box { background: var(--primary-light); border-radius: var(--radius-sm); padding: 16px; text-align: center; margin-bottom: 16px; }
     .invite-code { font-size: 28px; font-weight: 800; color: var(--primary); letter-spacing: 4px; }
     .invite-hint { font-size: 12px; color: var(--text-3); margin-top: 4px; }
 
-    .member-row {
-      display: flex; align-items: center; gap: 12px;
-      padding: 12px 0; border-bottom: 1px solid var(--border);
-    }
+    .member-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
     .member-row:last-child { border-bottom: none; }
-    .member-avatar {
-      width: 40px; height: 40px; border-radius: 50%;
-      background: var(--primary-soft); font-size: 20px;
-      display: flex; align-items: center; justify-content: center;
-      overflow: hidden;
-    }
+    .member-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--primary-soft); font-size: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
     .member-row.selectable { cursor: pointer; padding: 12px 8px; border-radius: 10px; border-bottom: 1px solid var(--border); }
     .member-row.selectable.selected { background: var(--primary-light); }
     .member-name { flex: 1; font-size: 15px; font-weight: 500; }
 
-    .saved-badge {
-      display: inline-flex; align-items: center; gap: 4px;
-      background: var(--green-light); color: var(--green);
-      border-radius: 20px; padding: 4px 12px;
-      font-size: 12px; font-weight: 600;
-    }
+    .saved-badge { display: inline-flex; align-items: center; gap: 4px; background: var(--green-light); color: var(--green); border-radius: 20px; padding: 4px 12px; font-size: 12px; font-weight: 600; }
 
-    /* ===== 图片上传区域 ===== */
     .img-upload-box {
-      width: 100%; aspect-ratio: 1;
-      border: 2px dashed var(--border); border-radius: var(--radius);
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      gap: 8px; cursor: pointer; background: var(--bg);
-      transition: all 0.2s; overflow: hidden; position: relative;
+      width: 100%; aspect-ratio: 1; border: 2px dashed var(--border); border-radius: var(--radius);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 8px; cursor: pointer; background: var(--bg); transition: all 0.2s; overflow: hidden; position: relative;
     }
     .img-upload-box:active { background: var(--primary-light); border-color: var(--primary); }
     .img-upload-box.has-img { border-style: solid; border-color: var(--border); }
     .img-upload-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .img-upload-icon { font-size: 32px; }
     .img-upload-hint { font-size: 13px; color: var(--text-3); }
-    .img-upload-change {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      background: rgba(0,0,0,0.45); color: white;
-      font-size: 12px; text-align: center; padding: 6px;
-    }
-    /* 隐藏的文件 input */
+    .img-upload-change { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.45); color: white; font-size: 12px; text-align: center; padding: 6px; }
     .file-input-hidden { display: none; }
 
-    /* ===== 头像选择器 ===== */
-    .avatar-picker-wrap {
-      display: flex; flex-direction: column; align-items: center; gap: 12px; margin-bottom: 20px;
-    }
-    .avatar-large {
-      width: 88px; height: 88px; border-radius: 50%;
-      background: var(--primary-soft); font-size: 42px;
-      display: flex; align-items: center; justify-content: center;
-      position: relative; overflow: hidden; cursor: pointer;
-      border: 3px solid var(--primary-soft);
-    }
+    .avatar-picker-wrap { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .avatar-large { width: 88px; height: 88px; border-radius: 50%; background: var(--primary-soft); font-size: 42px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; cursor: pointer; border: 3px solid var(--primary-soft); }
     .avatar-large img { width: 100%; height: 100%; object-fit: cover; }
-    .avatar-large-overlay {
-      position: absolute; inset: 0;
-      background: rgba(0,0,0,0.35); display: flex;
-      align-items: center; justify-content: center;
-      color: white; font-size: 20px;
-    }
-    .avatar-tab-row {
-      display: flex; gap: 0; border: 1.5px solid var(--border);
-      border-radius: 20px; overflow: hidden; width: 100%;
-    }
-    .avatar-tab {
-      flex: 1; padding: 8px; text-align: center;
-      font-size: 13px; font-weight: 500; cursor: pointer;
-      color: var(--text-2); background: white;
-    }
+    .avatar-large-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; }
+    .avatar-tab-row { display: flex; gap: 0; border: 1.5px solid var(--border); border-radius: 20px; overflow: hidden; width: 100%; }
+    .avatar-tab { flex: 1; padding: 8px; text-align: center; font-size: 13px; font-weight: 500; cursor: pointer; color: var(--text-2); background: white; }
     .avatar-tab.active { background: var(--primary); color: white; }
-    .emoji-grid {
-      display: grid; grid-template-columns: repeat(6,1fr); gap: 6px; width: 100%;
-    }
-    .emoji-opt {
-      aspect-ratio: 1; border-radius: 10px; font-size: 24px;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; border: 2px solid transparent;
-      transition: all 0.15s;
-    }
+    .emoji-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 6px; width: 100%; }
+    .emoji-opt { aspect-ratio: 1; border-radius: 10px; font-size: 24px; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 2px solid transparent; transition: all 0.15s; }
     .emoji-opt.selected { border-color: var(--primary); background: var(--primary-light); }
     .emoji-opt:active { transform: scale(0.88); }
 
-    /* ===== 购物清单 ===== */
-    .shop-item {
-      display: flex; align-items: center; gap: 12px;
-      padding: 10px 4px; border-bottom: 1px solid var(--border);
-      cursor: pointer;
-    }
+    .shop-item { display: flex; align-items: center; gap: 12px; padding: 10px 4px; border-bottom: 1px solid var(--border); cursor: pointer; }
     .shop-item:last-child { border-bottom: none; }
-    .shop-check {
-      width: 22px; height: 22px; border-radius: 50%;
-      border: 2px solid var(--border); flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 12px; color: white;
-    }
+    .shop-check { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--border); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; color: white; }
     .shop-check.checked { background: var(--green); border-color: var(--green); }
     .shop-name { flex: 1; font-size: 15px; font-weight: 500; }
     .shop-name.checked { text-decoration: line-through; color: var(--text-3); }
     .shop-from { font-size: 11px; color: var(--text-3); }
 
-    /* ===== 摇一摇结果 ===== */
-    .shake-result-card {
-      background: linear-gradient(135deg, #FFF7E6 0%, #FFE9EE 100%);
-      border-radius: var(--radius);
-      padding: 16px; margin-bottom: 16px;
-    }
-    .shake-dish {
-      display: flex; align-items: center; gap: 12px;
-      background: white; border-radius: var(--radius-sm);
-      padding: 12px; margin-bottom: 8px;
-    }
+    .shake-result-card { background: linear-gradient(135deg, #FFF7E6 0%, #FFE9EE 100%); border-radius: var(--radius); padding: 16px; margin-bottom: 16px; }
+    .shake-dish { display: flex; align-items: center; gap: 12px; background: white; border-radius: var(--radius-sm); padding: 12px; margin-bottom: 8px; }
     .shake-dish:last-child { margin-bottom: 0; }
     .shake-dish-emoji { font-size: 32px; }
     .shake-dish-info { flex: 1; }
     .shake-dish-name { font-size: 15px; font-weight: 600; }
     .shake-dish-cat { font-size: 12px; color: var(--text-3); margin-top: 2px; }
+
+    /* 加载页 */
+    .full-loading {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 16px;
+      color: var(--text-3); font-size: 14px;
+    }
+    .spinner {
+      width: 36px; height: 36px;
+      border: 3px solid var(--primary-soft);
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* 在线指示器 */
+    .sync-dot {
+      display: inline-block; width: 8px; height: 8px;
+      border-radius: 50%; background: var(--green);
+      margin-right: 6px; vertical-align: middle;
+    }
+    .sync-dot.offline { background: var(--text-3); }
   </style>
 </head>
 <body>
 <div id="root"></div>
 
-<script type="text/babel">
-const { useState, useEffect, useCallback, useRef, useMemo } = React;
+<!-- Firebase v10 modular SDK -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+  import {
+    getAuth, signInAnonymously, onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+  import {
+    getFirestore, doc, getDoc, setDoc, updateDoc, deleteDoc, addDoc,
+    collection, query, where, getDocs, onSnapshot,
+    serverTimestamp, writeBatch, arrayUnion, arrayRemove
+  } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
-// ===== 初始数据 =====
+  // ====== 你的 Firebase 配置 ======
+  const firebaseConfig = {
+    apiKey: "AIzaSyAVh8G11fyxY3_61pFjDbo5LmqrG4Xykl4",
+    authDomain: "lu-kitchen.firebaseapp.com",
+    projectId: "lu-kitchen",
+    storageBucket: "lu-kitchen.firebasestorage.app",
+    messagingSenderId: "24529343596",
+    appId: "1:24529343596:web:501389b4fb728ff277f449",
+    measurementId: "G-L4VVZDBE6H"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  // 暴露到全局供 babel 脚本使用
+  window.__fb = {
+    auth, db,
+    signInAnonymously, onAuthStateChanged,
+    doc, getDoc, setDoc, updateDoc, deleteDoc, addDoc,
+    collection, query, where, getDocs, onSnapshot,
+    serverTimestamp, writeBatch, arrayUnion, arrayRemove,
+  };
+  // 通知 React 应用 Firebase 已就绪
+  window.dispatchEvent(new Event('fb-ready'));
+</script>
+
+<script type="text/babel" data-presets="react">
+const { useState, useEffect, useCallback, useRef, useMemo, createContext, useContext } = React;
+
+// ===== 等待 Firebase 加载 =====
+function waitForFirebase() {
+  return new Promise((resolve) => {
+    if (window.__fb) return resolve(window.__fb);
+    window.addEventListener('fb-ready', () => resolve(window.__fb), { once: true });
+  });
+}
+
+// ===== 初始数据（首次创建厨房时塞入示例菜品）=====
 const CATEGORIES = [
   { id: 'all', name: '全部', icon: '🍽️' },
   { id: 'meat', name: '荤菜', icon: '🥩' },
@@ -639,7 +495,6 @@ const CATEGORIES = [
   { id: 'dessert', name: '甜品', icon: '🍰' },
 ];
 
-// 辣度等级（0 = 不辣，4 = 重辣）
 const SPICY_LEVELS = [
   { level: 0, name: '不辣', icon: '' },
   { level: 1, name: '微辣', icon: '🌶' },
@@ -647,74 +502,90 @@ const SPICY_LEVELS = [
   { level: 3, name: '重辣', icon: '🌶🌶🌶' },
 ];
 
-// 口味/特点标签
 const TASTE_TAGS = ['清淡', '下饭', '快手', '暖胃', '补汤', '减脂', '解腻', '甜口', '咸鲜', '酸辣'];
 
 const SAMPLE_DISHES = [
-  // 荤菜
-  { id: 1, name: '红烧肉', categoryId: 'meat', emoji: '🍖', spicy: 0, tags: ['下饭', '咸鲜'], ingredients: ['五花肉','酱油','冰糖','姜','八角'] },
-  { id: 6, name: '清蒸鱼', categoryId: 'meat', emoji: '🐟', spicy: 0, tags: ['清淡', '咸鲜'], ingredients: ['鱼','姜','葱','蒸鱼豉油'] },
-  { id: 12, name: '可乐鸡翅', categoryId: 'meat', emoji: '🍗', spicy: 0, tags: ['下饭', '甜口'], ingredients: ['鸡翅','可乐','酱油','姜'] },
-  { id: 13, name: '水煮肉片', categoryId: 'meat', emoji: '🥩', spicy: 3, tags: ['下饭', '酸辣'], ingredients: ['猪里脊','豆芽','干辣椒','花椒','豆瓣酱'] },
-  // 素菜
-  { id: 2, name: '清炒时蔬', categoryId: 'veg', emoji: '🥬', spicy: 0, tags: ['清淡', '减脂', '快手'], ingredients: ['时令蔬菜','大蒜','盐'] },
-  { id: 7, name: '蒜蓉西兰花', categoryId: 'veg', emoji: '🥦', spicy: 0, tags: ['清淡', '减脂', '快手'], ingredients: ['西兰花','大蒜','盐'] },
-  { id: 9, name: '手撕包菜', categoryId: 'veg', emoji: '🥬', spicy: 1, tags: ['下饭', '快手'], ingredients: ['包菜','干辣椒','蒜','生抽'] },
-  { id: 14, name: '酸辣土豆丝', categoryId: 'veg', emoji: '🥔', spicy: 2, tags: ['下饭', '酸辣', '快手'], ingredients: ['土豆','干辣椒','醋','蒜'] },
-  // 蛋/豆
-  { id: 4, name: '蒸鸡蛋羹', categoryId: 'egg', emoji: '🥚', spicy: 0, tags: ['清淡', '快手'], ingredients: ['鸡蛋','盐','香油'] },
-  { id: 10, name: '麻婆豆腐', categoryId: 'egg', emoji: '🧆', spicy: 3, tags: ['下饭', '酸辣'], ingredients: ['豆腐','肉末','豆瓣酱','花椒','葱'] },
-  // 汤
-  { id: 3, name: '番茄蛋汤', categoryId: 'soup', emoji: '🍅', spicy: 0, tags: ['清淡', '快手', '补汤'], ingredients: ['番茄','鸡蛋','葱','盐'] },
-  { id: 8, name: '玉米排骨汤', categoryId: 'soup', emoji: '🌽', spicy: 0, tags: ['补汤', '暖胃'], ingredients: ['排骨','玉米','胡萝卜','盐','姜'] },
-  // 主食
-  { id: 5, name: '白米饭', categoryId: 'staple', emoji: '🍚', spicy: 0, tags: ['清淡'], ingredients: ['大米'] },
-  { id: 11, name: '炒面', categoryId: 'staple', emoji: '🍜', spicy: 0, tags: ['下饭', '快手'], ingredients: ['面条','鸡蛋','蔬菜','酱油'] },
-  // 酒水饮料 ⭐ 新增
-  { id: 20, name: '冰可乐', categoryId: 'drink', emoji: '🥤', spicy: 0, tags: ['解腻'], ingredients: ['可乐'] },
-  { id: 21, name: '柠檬蜂蜜水', categoryId: 'drink', emoji: '🍋', spicy: 0, tags: ['清淡', '甜口'], ingredients: ['柠檬','蜂蜜','温水'] },
-  { id: 22, name: '酸梅汤', categoryId: 'drink', emoji: '🥤', spicy: 0, tags: ['解腻', '酸辣'], ingredients: ['乌梅','山楂','陈皮','冰糖'] },
-  { id: 23, name: '青岛啤酒', categoryId: 'drink', emoji: '🍺', spicy: 0, tags: ['解腻'], ingredients: ['啤酒'] },
-  { id: 24, name: '热牛奶', categoryId: 'drink', emoji: '🥛', spicy: 0, tags: ['暖胃', '甜口'], ingredients: ['牛奶'] },
-  { id: 25, name: '冰美式', categoryId: 'drink', emoji: '☕', spicy: 0, tags: ['解腻'], ingredients: ['浓缩咖啡','冰块','水'] },
-  // 甜品 ⭐ 新增
-  { id: 30, name: '银耳莲子羹', categoryId: 'dessert', emoji: '🍮', spicy: 0, tags: ['清淡', '甜口', '暖胃'], ingredients: ['银耳','莲子','枸杞','冰糖'] },
-  { id: 31, name: '小蛋糕', categoryId: 'dessert', emoji: '🍰', spicy: 0, tags: ['甜口'], ingredients: ['蛋糕'] },
-  { id: 32, name: '冰激凌', categoryId: 'dessert', emoji: '🍦', spicy: 0, tags: ['甜口', '解腻'], ingredients: ['冰激凌'] },
-  { id: 33, name: '红豆沙', categoryId: 'dessert', emoji: '🫘', spicy: 0, tags: ['甜口', '暖胃'], ingredients: ['红豆','冰糖','椰浆'] },
-  { id: 34, name: '水果拼盘', categoryId: 'dessert', emoji: '🍓', spicy: 0, tags: ['清淡', '减脂', '快手'], ingredients: ['草莓','蓝莓','苹果','橙子'] },
+  { id: 'd001', name: '红烧肉', categoryId: 'meat', emoji: '🍖', spicy: 0, tags: ['下饭', '咸鲜'], ingredients: ['五花肉','酱油','冰糖','姜','八角'] },
+  { id: 'd002', name: '清蒸鱼', categoryId: 'meat', emoji: '🐟', spicy: 0, tags: ['清淡', '咸鲜'], ingredients: ['鱼','姜','葱','蒸鱼豉油'] },
+  { id: 'd003', name: '可乐鸡翅', categoryId: 'meat', emoji: '🍗', spicy: 0, tags: ['下饭', '甜口'], ingredients: ['鸡翅','可乐','酱油','姜'] },
+  { id: 'd004', name: '水煮肉片', categoryId: 'meat', emoji: '🥩', spicy: 3, tags: ['下饭', '酸辣'], ingredients: ['猪里脊','豆芽','干辣椒','花椒','豆瓣酱'] },
+  { id: 'd005', name: '清炒时蔬', categoryId: 'veg', emoji: '🥬', spicy: 0, tags: ['清淡', '减脂', '快手'], ingredients: ['时令蔬菜','大蒜','盐'] },
+  { id: 'd006', name: '蒜蓉西兰花', categoryId: 'veg', emoji: '🥦', spicy: 0, tags: ['清淡', '减脂', '快手'], ingredients: ['西兰花','大蒜','盐'] },
+  { id: 'd007', name: '手撕包菜', categoryId: 'veg', emoji: '🥬', spicy: 1, tags: ['下饭', '快手'], ingredients: ['包菜','干辣椒','蒜','生抽'] },
+  { id: 'd008', name: '酸辣土豆丝', categoryId: 'veg', emoji: '🥔', spicy: 2, tags: ['下饭', '酸辣', '快手'], ingredients: ['土豆','干辣椒','醋','蒜'] },
+  { id: 'd009', name: '蒸鸡蛋羹', categoryId: 'egg', emoji: '🥚', spicy: 0, tags: ['清淡', '快手'], ingredients: ['鸡蛋','盐','香油'] },
+  { id: 'd010', name: '麻婆豆腐', categoryId: 'egg', emoji: '🧆', spicy: 3, tags: ['下饭', '酸辣'], ingredients: ['豆腐','肉末','豆瓣酱','花椒','葱'] },
+  { id: 'd011', name: '番茄蛋汤', categoryId: 'soup', emoji: '🍅', spicy: 0, tags: ['清淡', '快手', '补汤'], ingredients: ['番茄','鸡蛋','葱','盐'] },
+  { id: 'd012', name: '玉米排骨汤', categoryId: 'soup', emoji: '🌽', spicy: 0, tags: ['补汤', '暖胃'], ingredients: ['排骨','玉米','胡萝卜','盐','姜'] },
+  { id: 'd013', name: '白米饭', categoryId: 'staple', emoji: '🍚', spicy: 0, tags: ['清淡'], ingredients: ['大米'] },
+  { id: 'd014', name: '炒面', categoryId: 'staple', emoji: '🍜', spicy: 0, tags: ['下饭', '快手'], ingredients: ['面条','鸡蛋','蔬菜','酱油'] },
+  { id: 'd020', name: '冰可乐', categoryId: 'drink', emoji: '🥤', spicy: 0, tags: ['解腻'], ingredients: ['可乐'] },
+  { id: 'd021', name: '柠檬蜂蜜水', categoryId: 'drink', emoji: '🍋', spicy: 0, tags: ['清淡', '甜口'], ingredients: ['柠檬','蜂蜜','温水'] },
+  { id: 'd022', name: '酸梅汤', categoryId: 'drink', emoji: '🥤', spicy: 0, tags: ['解腻', '酸辣'], ingredients: ['乌梅','山楂','陈皮','冰糖'] },
+  { id: 'd023', name: '青岛啤酒', categoryId: 'drink', emoji: '🍺', spicy: 0, tags: ['解腻'], ingredients: ['啤酒'] },
+  { id: 'd024', name: '热牛奶', categoryId: 'drink', emoji: '🥛', spicy: 0, tags: ['暖胃', '甜口'], ingredients: ['牛奶'] },
+  { id: 'd025', name: '冰美式', categoryId: 'drink', emoji: '☕', spicy: 0, tags: ['解腻'], ingredients: ['浓缩咖啡','冰块','水'] },
+  { id: 'd030', name: '银耳莲子羹', categoryId: 'dessert', emoji: '🍮', spicy: 0, tags: ['清淡', '甜口', '暖胃'], ingredients: ['银耳','莲子','枸杞','冰糖'] },
+  { id: 'd031', name: '小蛋糕', categoryId: 'dessert', emoji: '🍰', spicy: 0, tags: ['甜口'], ingredients: ['蛋糕'] },
+  { id: 'd032', name: '冰激凌', categoryId: 'dessert', emoji: '🍦', spicy: 0, tags: ['甜口', '解腻'], ingredients: ['冰激凌'] },
+  { id: 'd033', name: '红豆沙', categoryId: 'dessert', emoji: '🫘', spicy: 0, tags: ['甜口', '暖胃'], ingredients: ['红豆','冰糖','椰浆'] },
+  { id: 'd034', name: '水果拼盘', categoryId: 'dessert', emoji: '🍓', spicy: 0, tags: ['清淡', '减脂', '快手'], ingredients: ['草莓','蓝莓','苹果','橙子'] },
 ];
 
-// ===== 数据存储工具 =====
-const storage = {
-  get: (key, def) => { try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : def; } catch { return def; } },
-  set: (key, val) => { try { localStorage.setItem(key, JSON.stringify(val)); } catch {} },
-};
+const AVATAR_EMOJIS = ['👨‍🍳','👩‍🍳','😊','😄','🧑','👴','👵','🧓','🧑‍🦱','🧑‍🦳','🧑‍🦲','😎','🤗','😋','🥰','🤩','👶','🧒','👧','👦'];
 
-const todayStr = () => new Date().toLocaleDateString('zh-CN', { year:'numeric', month:'2-digit', day:'2-digit' }).replace(/\//g,'-');
+const todayStr = () => new Date().toLocaleDateString('en-CA'); // YYYY-MM-DD
 const todayFull = () => new Date().toLocaleDateString('zh-CN', { year:'numeric', month:'long', day:'numeric', weekday:'long' });
 
-// 计算两个日期字符串差几天（YYYY-MM-DD 格式）
 const daysBetween = (dStr) => {
   try {
-    const d = new Date(dStr.replace(/-/g,'/'));
+    const d = new Date(dStr);
     const now = new Date();
-    const diff = Math.floor((now - d) / (1000*60*60*24));
-    return diff;
+    return Math.floor((now - d) / (1000*60*60*24));
   } catch { return 999; }
 };
 
-// 取得菜品近期被吃次数（用于摇一摇加权 + 重复提醒）
-const recentDishMap = () => {
-  const hist = storage.get('fam_history', []);
-  const map = {}; // { dishId: 最近一次吃的天数差 }
-  hist.slice(0, 14).forEach(h => {
-    const days = daysBetween(h.date);
-    (h.dishes || []).forEach(d => {
-      if (!(d.id in map) || days < map[d.id]) map[d.id] = days;
+// ===== Firebase Context =====
+const FbContext = createContext(null);
+
+function FirebaseProvider({ children }) {
+  const [fb, setFb] = useState(null);
+  const [user, setUser] = useState(null); // {uid}
+  const [authReady, setAuthReady] = useState(false);
+
+  useEffect(() => {
+    let unsub = null;
+    waitForFirebase().then(api => {
+      setFb(api);
+      // 监听登录状态
+      unsub = api.onAuthStateChanged(api.auth, async (u) => {
+        if (u) {
+          setUser({ uid: u.uid });
+          setAuthReady(true);
+        } else {
+          // 没登录 → 匿名登录
+          try {
+            await api.signInAnonymously(api.auth);
+          } catch (e) {
+            console.error('Auth failed', e);
+            setAuthReady(true);
+          }
+        }
+      });
     });
-  });
-  return map;
+    return () => { if (unsub) unsub(); };
+  }, []);
+
+  return <FbContext.Provider value={{ fb, user, authReady }}>{children}</FbContext.Provider>;
+}
+
+function useFb() { return useContext(FbContext); }
+
+// ===== 本地用户偏好缓存（厨房ID/名字等放本地以便快速恢复）=====
+const localPref = {
+  get(k, def) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : def; } catch { return def; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+  clear() { try { localStorage.removeItem('fam_kitchen_id'); } catch {} },
 };
 
 // ===== Toast 组件 =====
@@ -722,54 +593,128 @@ function Toast({ msg }) {
   return msg ? <div className="toast">{msg}</div> : null;
 }
 
-// ===== 欢迎/设置页 =====
-function OnboardPage({ onDone }) {
+// ===== 全屏加载页 =====
+function FullLoading({ text }) {
+  return (
+    <div className="full-loading">
+      <div className="spinner" />
+      <div>{text || '加载中...'}</div>
+    </div>
+  );
+}
+
+// ===== 辣度小标签 =====
+function SpicyTag({ level }) {
+  if (!level) return null;
+  return <span className={`tag-mini spicy-${level}`}>{'🌶'.repeat(level)}</span>;
+}
+
+// ===== 欢迎/设置页（云端版）=====
+function OnboardPage({ onJoined, showToast }) {
+  const { fb, user } = useFb();
   const [step, setStep] = useState('welcome');
   const [kitchenName, setKitchenName] = useState('');
   const [inviteInput, setInviteInput] = useState('');
   const [myName, setMyName] = useState('');
   const [isAdmin, setIsAdmin] = useState(true);
   const [pendingKitchen, setPendingKitchen] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  const handleCreate = () => {
+  const handleCreate = async () => {
     if (!kitchenName.trim()) return;
-    const kitchen = { id: Date.now().toString(), name: kitchenName.trim(), inviteCode: Math.random().toString(36).slice(2,8).toUpperCase() };
-    setPendingKitchen(kitchen);
-    setIsAdmin(true);
-    setStep('name');
+    if (!user) { showToast('正在登录中，请稍候...'); return; }
+    setLoading(true);
+    try {
+      const inviteCode = Math.random().toString(36).slice(2,8).toUpperCase();
+      const kRef = await fb.addDoc(fb.collection(fb.db, 'kitchens'), {
+        name: kitchenName.trim(),
+        inviteCode,
+        createdBy: user.uid,
+        createdAt: fb.serverTimestamp(),
+      });
+      setPendingKitchen({ id: kRef.id, name: kitchenName.trim(), inviteCode });
+      setIsAdmin(true);
+      setStep('name');
+    } catch (e) {
+      console.error(e);
+      showToast('创建失败：' + (e.message || '请检查网络'));
+    }
+    setLoading(false);
   };
 
-  const handleJoin = () => {
-    const saved = storage.get('fam_kitchen', null);
-    if (saved && saved.inviteCode === inviteInput.trim().toUpperCase()) {
-      setPendingKitchen(saved);
+  const handleJoin = async () => {
+    if (!user) { showToast('正在登录中，请稍候...'); return; }
+    if (!inviteInput.trim()) { showToast('请输入邀请码'); return; }
+    setLoading(true);
+    try {
+      const q = fb.query(fb.collection(fb.db, 'kitchens'), fb.where('inviteCode', '==', inviteInput.trim().toUpperCase()));
+      const snap = await fb.getDocs(q);
+      if (snap.empty) {
+        showToast('邀请码不存在，请确认是否输入正确');
+        setLoading(false);
+        return;
+      }
+      const kd = snap.docs[0];
+      const data = kd.data();
+      setPendingKitchen({ id: kd.id, name: data.name, inviteCode: data.inviteCode });
       setIsAdmin(false);
       setStep('name');
-    } else {
-      alert('邀请码不正确，请重新输入');
+    } catch (e) {
+      console.error(e);
+      showToast('查询失败：' + (e.message || '请检查网络'));
     }
+    setLoading(false);
   };
 
-  const handleFinish = () => {
+  const handleFinish = async () => {
     if (!myName.trim()) return;
-    const userId = Date.now().toString();
-    storage.set('fam_kitchen', pendingKitchen);
-    storage.set('fam_user', { id: userId, name: myName.trim(), role: isAdmin ? 'admin' : 'member', emoji: isAdmin ? '👨‍🍳' : '😊' });
-    const members = storage.get('fam_members', []);
-    const me = { id: userId, name: myName.trim(), role: isAdmin ? 'admin' : 'member', emoji: isAdmin ? '👨‍🍳' : '😊' };
-    storage.set('fam_members', [...members, me]);
-    storage.set('fam_dishes', SAMPLE_DISHES);
-    onDone();
+    if (!user || !pendingKitchen) { showToast('系统错误，请重试'); return; }
+    setLoading(true);
+    try {
+      // 把自己写入 kitchens/{id}/members/{uid}
+      await fb.setDoc(
+        fb.doc(fb.db, 'kitchens', pendingKitchen.id, 'members', user.uid),
+        {
+          name: myName.trim(),
+          role: isAdmin ? 'admin' : 'member',
+          emoji: isAdmin ? '👨‍🍳' : '😊',
+          avatarImg: '',
+          favorites: [],
+          joinedAt: fb.serverTimestamp(),
+        }
+      );
+      // 如果是 admin 创建的厨房，塞入示例菜品（用 batch 一次写完）
+      if (isAdmin) {
+        const batch = fb.writeBatch(fb.db);
+        SAMPLE_DISHES.forEach(d => {
+          const ref = fb.doc(fb.db, 'kitchens', pendingKitchen.id, 'dishes', d.id);
+          batch.set(ref, d);
+        });
+        // 初始化 today/state 文档
+        batch.set(fb.doc(fb.db, 'kitchens', pendingKitchen.id, 'today', 'state'), {
+          date: todayStr(), menu: [], chef: null, shopChecked: {}
+        });
+        await batch.commit();
+      }
+      // 记录用户当前所在厨房
+      await fb.setDoc(fb.doc(fb.db, 'users', user.uid), { currentKitchenId: pendingKitchen.id }, { merge: true });
+      localPref.set('fam_kitchen_id', pendingKitchen.id);
+      onJoined(pendingKitchen.id);
+    } catch (e) {
+      console.error(e);
+      showToast('加入失败：' + (e.message || '请重试'));
+    }
+    setLoading(false);
   };
 
   if (step === 'welcome') return (
     <div className="onboard">
       <div className="onboard-logo">🏠</div>
       <div className="onboard-title">家厨点菜</div>
-      <div className="onboard-sub">家人一起选菜，每天吃得开心</div>
+      <div className="onboard-sub"><span className="sync-dot" />家人一起选菜，云端实时同步</div>
       <div className="onboard-btns">
         <button className="btn-primary" onClick={() => setStep('create')}>创建我家厨房</button>
-        <button className="btn-outline" style={{width:'100%',padding:'12px 28px',borderRadius:24,fontSize:15,fontWeight:600,cursor:'pointer'}} onClick={() => setStep('join')}>输入邀请码加入</button>
+        <button className="btn-outline" style={{width:'100%',padding:'12px 28px',borderRadius:24,fontSize:15,fontWeight:600}} onClick={() => setStep('join')}>输入邀请码加入</button>
       </div>
     </div>
   );
@@ -783,8 +728,8 @@ function OnboardPage({ onDone }) {
         <input className="input-field" style={{width:'100%',textAlign:'center',fontSize:18,fontWeight:600}} placeholder="我家厨房" value={kitchenName} onChange={e=>setKitchenName(e.target.value)} />
       </div>
       <div className="onboard-btns">
-        <button className="btn-primary" onClick={handleCreate}>下一步</button>
-        <button className="btn-outline" style={{width:'100%',padding:'12px',borderRadius:24,fontSize:14,cursor:'pointer'}} onClick={() => setStep('welcome')}>返回</button>
+        <button className="btn-primary" onClick={handleCreate} disabled={loading}>{loading ? '创建中...' : '下一步'}</button>
+        <button className="btn-outline" style={{width:'100%',padding:'12px',borderRadius:24,fontSize:14}} onClick={() => setStep('welcome')}>返回</button>
       </div>
     </div>
   );
@@ -798,8 +743,8 @@ function OnboardPage({ onDone }) {
         <input className="input-field" style={{width:'100%',textAlign:'center',fontSize:24,fontWeight:800,letterSpacing:4}} placeholder="XXXXXX" value={inviteInput} onChange={e=>setInviteInput(e.target.value.toUpperCase())} maxLength={6} />
       </div>
       <div className="onboard-btns">
-        <button className="btn-primary" onClick={handleJoin}>加入厨房</button>
-        <button className="btn-outline" style={{width:'100%',padding:'12px',borderRadius:24,fontSize:14,cursor:'pointer'}} onClick={() => setStep('welcome')}>返回</button>
+        <button className="btn-primary" onClick={handleJoin} disabled={loading}>{loading ? '查询中...' : '加入厨房'}</button>
+        <button className="btn-outline" style={{width:'100%',padding:'12px',borderRadius:24,fontSize:14}} onClick={() => setStep('welcome')}>返回</button>
       </div>
     </div>
   );
@@ -808,88 +753,137 @@ function OnboardPage({ onDone }) {
     <div className="onboard" style={{justifyContent:'flex-start',paddingTop:80}}>
       <div style={{fontSize:48,marginBottom:16}}>{isAdmin ? '👨‍🍳' : '😊'}</div>
       <div className="onboard-title" style={{fontSize:22}}>你叫什么名字？</div>
-      <div className="onboard-sub">家人看菜单时会看到你的名字</div>
+      <div className="onboard-sub">{pendingKitchen?.name} · 家人看菜单时会看到你的名字</div>
       <div style={{width:'100%',marginBottom:24}}>
         <input className="input-field" style={{width:'100%',textAlign:'center',fontSize:18,fontWeight:600}} placeholder={isAdmin?'厨师长':'家庭成员'} value={myName} onChange={e=>setMyName(e.target.value)} />
       </div>
       <div className="onboard-btns">
-        <button className="btn-primary" onClick={handleFinish}>进入厨房 🎉</button>
+        <button className="btn-primary" onClick={handleFinish} disabled={loading}>{loading ? '加入中...' : '进入厨房 🎉'}</button>
       </div>
     </div>
   );
 }
 
-// ===== 辣度小标签组件 =====
-function SpicyTag({ level }) {
-  if (!level) return null;
-  return <span className={`tag-mini spicy-${level}`}>{'🌶'.repeat(level)}</span>;
+// ===== 数据 hook：订阅厨房所有相关数据 =====
+function useKitchenData(kitchenId) {
+  const { fb, user } = useFb();
+  const [kitchen, setKitchen] = useState(null);
+  const [members, setMembers] = useState([]);
+  const [dishes, setDishes] = useState([]);
+  const [todayState, setTodayState] = useState({ date: todayStr(), menu: [], chef: null, shopChecked: {} });
+  const [history, setHistory] = useState([]);
+  const [votes, setVotes] = useState({}); // {dishId: {up:[uid], down:[uid]}}
+  const [loaded, setLoaded] = useState({ kitchen:false, members:false, dishes:false, today:false, history:false, votes:false });
+
+  useEffect(() => {
+    if (!fb || !kitchenId) return;
+    const unsubs = [];
+
+    // kitchen
+    unsubs.push(fb.onSnapshot(fb.doc(fb.db, 'kitchens', kitchenId), s => {
+      setKitchen(s.exists() ? { id: s.id, ...s.data() } : null);
+      setLoaded(p => ({ ...p, kitchen: true }));
+    }));
+    // members
+    unsubs.push(fb.onSnapshot(fb.collection(fb.db, 'kitchens', kitchenId, 'members'), s => {
+      const arr = s.docs.map(d => ({ id: d.id, ...d.data() }));
+      setMembers(arr);
+      setLoaded(p => ({ ...p, members: true }));
+    }));
+    // dishes
+    unsubs.push(fb.onSnapshot(fb.collection(fb.db, 'kitchens', kitchenId, 'dishes'), s => {
+      const arr = s.docs.map(d => ({ id: d.id, ...d.data() }));
+      setDishes(arr);
+      setLoaded(p => ({ ...p, dishes: true }));
+    }));
+    // today/state
+    unsubs.push(fb.onSnapshot(fb.doc(fb.db, 'kitchens', kitchenId, 'today', 'state'), s => {
+      if (s.exists()) {
+        const data = s.data();
+        // 自动跨日：如果存储的 date 不是今天，自动清空菜单（但保留 chef 给今天）
+        if (data.date !== todayStr()) {
+          setTodayState({ date: todayStr(), menu: [], chef: null, shopChecked: {} });
+        } else {
+          setTodayState({ date: data.date, menu: data.menu || [], chef: data.chef || null, shopChecked: data.shopChecked || {} });
+        }
+      } else {
+        setTodayState({ date: todayStr(), menu: [], chef: null, shopChecked: {} });
+      }
+      setLoaded(p => ({ ...p, today: true }));
+    }));
+    // history
+    unsubs.push(fb.onSnapshot(fb.collection(fb.db, 'kitchens', kitchenId, 'history'), s => {
+      const arr = s.docs.map(d => ({ ...d.data() })).sort((a,b) => (b.date||'').localeCompare(a.date||''));
+      setHistory(arr);
+      setLoaded(p => ({ ...p, history: true }));
+    }));
+    // votes
+    unsubs.push(fb.onSnapshot(fb.collection(fb.db, 'kitchens', kitchenId, 'votes'), s => {
+      const obj = {};
+      s.docs.forEach(d => { obj[d.id] = d.data(); });
+      setVotes(obj);
+      setLoaded(p => ({ ...p, votes: true }));
+    }));
+
+    return () => { unsubs.forEach(u => u && u()); };
+  }, [fb, kitchenId]);
+
+  const me = useMemo(() => members.find(m => m.id === user?.uid) || null, [members, user]);
+  const allLoaded = Object.values(loaded).every(Boolean);
+
+  return { kitchen, members, dishes, todayState, history, votes, me, allLoaded };
 }
 
 // ===== 今日页 =====
-function TodayPage({ showToast, goPage }) {
-  const [todayMenu, setTodayMenu] = useState([]);
-  const [saved, setSaved] = useState(false);
-  const [todayChef, setTodayChef] = useState(null);
-  const [history, setHistory] = useState([]);
+function TodayPage({ data, kitchenId, showToast, goPage }) {
+  const { fb, user } = useFb();
+  const { kitchen, members, dishes, todayState, history, votes, me } = data;
   const [showShopModal, setShowShopModal] = useState(false);
   const [showChefModal, setShowChefModal] = useState(false);
-  const [shopChecked, setShopChecked] = useState({});
-  const user = storage.get('fam_user', {});
-  const dishes = storage.get('fam_dishes', SAMPLE_DISHES);
-  const members = storage.get('fam_members', []);
 
-  // 重新加载今日数据
-  const reload = () => {
-    setTodayMenu(storage.get('fam_today_menu', []));
-    const hist = storage.get('fam_history', []);
-    setHistory(hist);
-    const todaySaved = hist.find(h => h.date === todayStr());
-    setSaved(!!todaySaved);
-    const chefs = storage.get('fam_today_chef', {});
-    setTodayChef(chefs[todayStr()] || null);
-    setShopChecked(storage.get('fam_shop_checked', {})[todayStr()] || {});
-  };
-  useEffect(() => { reload(); }, []);
-
-  const removeItem = (id) => {
-    const updated = todayMenu.filter(d => d.id !== id);
-    storage.set('fam_today_menu', updated);
-    setTodayMenu(updated);
+  const removeItem = async (id) => {
+    const updated = (todayState.menu || []).filter(d => d.id !== id);
+    await fb.setDoc(fb.doc(fb.db, 'kitchens', kitchenId, 'today', 'state'), {
+      date: todayStr(), menu: updated, chef: todayState.chef || null, shopChecked: todayState.shopChecked || {}
+    });
     showToast('已移除');
   };
 
-  const saveMenu = () => {
-    if (todayMenu.length === 0) { showToast('请先点几个菜~'); return; }
-    const hist = storage.get('fam_history', []);
-    const today = todayStr();
-    const filtered = hist.filter(h => h.date !== today);
-    const existing = hist.find(h => h.date === today) || {};
-    storage.set('fam_history', [{
-      date: today,
-      dishes: todayMenu,
-      savedBy: user.name,
-      chef: todayChef,
-      rating: existing.rating || 0,
-    }, ...filtered]);
-    setSaved(true);
-    reload();
-    showToast('今日菜单已保存 ✓');
+  const todaySaved = history.find(h => h.date === todayStr());
+
+  const saveMenu = async () => {
+    if ((todayState.menu || []).length === 0) { showToast('请先点几个菜~'); return; }
+    try {
+      const docRef = fb.doc(fb.db, 'kitchens', kitchenId, 'history', todayStr());
+      const existing = history.find(h => h.date === todayStr());
+      await fb.setDoc(docRef, {
+        date: todayStr(),
+        dishes: todayState.menu,
+        savedBy: me?.name || '某人',
+        savedByUid: user.uid,
+        chef: todayState.chef || null,
+        rating: existing?.rating || 0,
+        savedAt: fb.serverTimestamp(),
+      });
+      showToast('今日菜单已保存 ✓');
+    } catch (e) {
+      console.error(e); showToast('保存失败：' + e.message);
+    }
   };
 
-  const setChef = (memberId) => {
-    const chefs = storage.get('fam_today_chef', {});
-    chefs[todayStr()] = memberId;
-    storage.set('fam_today_chef', chefs);
-    setTodayChef(memberId);
+  const setChef = async (memberId) => {
+    await fb.setDoc(fb.doc(fb.db, 'kitchens', kitchenId, 'today', 'state'), {
+      date: todayStr(), menu: todayState.menu || [], chef: memberId, shopChecked: todayState.shopChecked || {}
+    });
     setShowChefModal(false);
     const m = members.find(mm => mm.id === memberId);
-    showToast(`今日厨师：${m?.name || '未知'} 👨‍🍳`);
+    showToast(memberId ? `今日厨师：${m?.name || '?'} 👨‍🍳` : '已清除');
   };
 
-  // 自动食材汇总（去重）
+  // 自动食材汇总
   const shoppingList = useMemo(() => {
-    const map = {}; // ingredient -> [dishName,...]
-    todayMenu.forEach(item => {
+    const map = {};
+    (todayState.menu || []).forEach(item => {
       const d = dishes.find(dd => dd.id === item.id);
       if (!d) return;
       (d.ingredients || []).forEach(ing => {
@@ -898,22 +892,19 @@ function TodayPage({ showToast, goPage }) {
       });
     });
     return Object.entries(map).map(([name, from]) => ({ name, from }));
-  }, [todayMenu, dishes]);
+  }, [todayState.menu, dishes]);
 
-  const toggleShopCheck = (name) => {
-    const updated = { ...shopChecked, [name]: !shopChecked[name] };
-    setShopChecked(updated);
-    const all = storage.get('fam_shop_checked', {});
-    all[todayStr()] = updated;
-    storage.set('fam_shop_checked', all);
+  const toggleShopCheck = async (name) => {
+    const updated = { ...(todayState.shopChecked || {}), [name]: !(todayState.shopChecked || {})[name] };
+    await fb.setDoc(fb.doc(fb.db, 'kitchens', kitchenId, 'today', 'state'), {
+      date: todayStr(), menu: todayState.menu || [], chef: todayState.chef || null, shopChecked: updated
+    });
   };
 
-  const getDish = (id) => dishes.find(d => d.id === id) || {};
-  const chefMember = members.find(m => m.id === todayChef);
+  const chefMember = members.find(m => m.id === todayState.chef);
 
-  // 双方都想吃推荐（基于投票，未在今日菜单的）
+  // 双方都想吃推荐
   const bothWantList = useMemo(() => {
-    const votes = storage.get('fam_votes', {}); // {dishId: {up:[uid,...], down:[uid,...]}}
     const memberIds = members.map(m => m.id);
     if (memberIds.length < 2) return [];
     const result = [];
@@ -921,66 +912,59 @@ function TodayPage({ showToast, goPage }) {
       if (d.hidden) return;
       const v = votes[d.id];
       if (!v || !v.up) return;
-      // 至少2个不同的成员投了想吃
       const uniqUp = [...new Set(v.up)].filter(uid => memberIds.includes(uid));
-      if (uniqUp.length >= 2 && !todayMenu.some(t => t.id === d.id)) {
+      if (uniqUp.length >= 2 && !(todayState.menu || []).some(t => t.id === d.id)) {
         result.push(d);
       }
     });
     return result.slice(0, 6);
-  }, [dishes, members, todayMenu]);
+  }, [dishes, members, votes, todayState.menu]);
 
-  const quickAdd = (d) => {
-    const updated = [...todayMenu, { id: d.id, name: d.name, emoji: d.emoji, categoryId: d.categoryId }];
-    storage.set('fam_today_menu', updated);
-    setTodayMenu(updated);
+  const quickAdd = async (d) => {
+    const updated = [...(todayState.menu || []), { id: d.id, name: d.name, emoji: d.emoji, categoryId: d.categoryId }];
+    await fb.setDoc(fb.doc(fb.db, 'kitchens', kitchenId, 'today', 'state'), {
+      date: todayStr(), menu: updated, chef: todayState.chef || null, shopChecked: todayState.shopChecked || {}
+    });
     showToast(`✓ 已加入 ${d.name}`);
   };
 
+  const getDish = (id) => dishes.find(d => d.id === id) || {};
+
   return (
     <div className="page-scroll">
-      {/* 顶部横幅 */}
       <div className="today-hero">
-        <div className="today-date">{todayFull()}</div>
-        <div className="today-title">{storage.get('fam_kitchen',{}).name || '家厨点菜'}</div>
+        <div className="today-date"><span className="sync-dot" />{todayFull()}</div>
+        <div className="today-title">{kitchen?.name || '家厨点菜'}</div>
         <div className="today-sub">今天吃什么，一起说了算 🥢</div>
-        {/* 今日厨师 */}
         <div className="today-chef-row">
           <div>
             <div className="today-chef-label">👨‍🍳 今日厨师</div>
             <div className="today-chef-name">{chefMember ? chefMember.name : '还没定～'}</div>
           </div>
-          <button className="today-chef-btn" onClick={() => setShowChefModal(true)}>
-            {todayChef ? '换人' : '指定'}
-          </button>
+          <button className="today-chef-btn" onClick={() => setShowChefModal(true)}>{todayState.chef ? '换人' : '指定'}</button>
         </div>
       </div>
 
-      {/* 双方都想吃推荐 */}
       {bothWantList.length > 0 && (
         <div className="both-want-banner">
           <div className="both-want-title">💕 两人都想吃，要不要安排一下？</div>
           <div className="both-want-list">
             {bothWantList.map(d => (
-              <div key={d.id} className="both-want-chip" onClick={() => quickAdd(d)}>
-                {d.emoji} {d.name} +
-              </div>
+              <div key={d.id} className="both-want-chip" onClick={() => quickAdd(d)}>{d.emoji} {d.name} +</div>
             ))}
           </div>
         </div>
       )}
 
-      {/* 菜单状态栏 */}
       <div className="section-header">
         <div>
           <div className="section-title">今日菜单</div>
-          {saved && <span className="saved-badge" style={{marginTop:4}}>✓ 已保存</span>}
+          {todaySaved && <span className="saved-badge" style={{marginTop:4}}>✓ 已保存</span>}
         </div>
-        <span style={{fontSize:13,color:'var(--text-3)'}}>共 {todayMenu.length} 道菜</span>
+        <span style={{fontSize:13,color:'var(--text-3)'}}>共 {(todayState.menu||[]).length} 道菜</span>
       </div>
 
-      {/* 菜单列表 */}
-      {todayMenu.length === 0 ? (
+      {(todayState.menu || []).length === 0 ? (
         <div className="empty-state">
           <div className="emoji">🍽️</div>
           <p>今天还没选菜</p>
@@ -988,7 +972,7 @@ function TodayPage({ showToast, goPage }) {
         </div>
       ) : (
         <div className="menu-list">
-          {todayMenu.map(item => {
+          {todayState.menu.map(item => {
             const d = getDish(item.id);
             const cat = CATEGORIES.find(c => c.id === (d.categoryId || item.categoryId));
             return (
@@ -1008,13 +992,10 @@ function TodayPage({ showToast, goPage }) {
         </div>
       )}
 
-      {/* 操作按钮：购物清单 + 保存 */}
-      {todayMenu.length > 0 && (
+      {(todayState.menu || []).length > 0 && (
         <div style={{padding:'16px 20px 0',display:'flex',gap:10}}>
-          <button className="btn-outline" style={{flex:1,padding:'12px'}} onClick={() => setShowShopModal(true)}>
-            🛒 购物清单 ({shoppingList.length})
-          </button>
-          {!saved ? (
+          <button className="btn-outline" style={{flex:1,padding:'12px'}} onClick={() => setShowShopModal(true)}>🛒 购物清单 ({shoppingList.length})</button>
+          {!todaySaved ? (
             <button className="btn-primary" style={{flex:1}} onClick={saveMenu}>📌 保存菜单</button>
           ) : (
             <button className="btn-primary" style={{flex:1, background:'var(--green)'}} onClick={saveMenu}>🔄 重新保存</button>
@@ -1022,7 +1003,6 @@ function TodayPage({ showToast, goPage }) {
         </div>
       )}
 
-      {/* 最近食记 */}
       {history.length > 0 && (
         <>
           <div className="section-header" style={{marginTop:8}}>
@@ -1043,7 +1023,6 @@ function TodayPage({ showToast, goPage }) {
         </>
       )}
 
-      {/* 模态：选厨师 */}
       {showChefModal && (
         <div className="modal-overlay" onClick={() => setShowChefModal(false)}>
           <div className="modal-sheet" onClick={e => e.stopPropagation()}>
@@ -1053,44 +1032,39 @@ function TodayPage({ showToast, goPage }) {
               <div style={{color:'var(--text-3)',padding:'20px 0',textAlign:'center'}}>还没有家庭成员</div>
             ) : (
               members.map(m => (
-                <div key={m.id} className={`member-row selectable ${todayChef===m.id?'selected':''}`} onClick={() => setChef(m.id)}>
+                <div key={m.id} className={`member-row selectable ${todayState.chef===m.id?'selected':''}`} onClick={() => setChef(m.id)}>
                   <div className="member-avatar">
                     {m.avatarImg ? <img src={m.avatarImg} style={{width:'100%',height:'100%',objectFit:'cover'}} /> : m.emoji}
                   </div>
                   <div className="member-name">{m.name}</div>
-                  {todayChef === m.id && <span style={{color:'var(--primary)',fontSize:18}}>✓</span>}
+                  {todayState.chef === m.id && <span style={{color:'var(--primary)',fontSize:18}}>✓</span>}
                 </div>
               ))
             )}
-            {todayChef && (
-              <button className="btn-outline" style={{width:'100%',marginTop:16,padding:12,borderRadius:24}} onClick={() => { setChef(null); }}>
-                清除今日厨师
-              </button>
+            {todayState.chef && (
+              <button className="btn-outline" style={{width:'100%',marginTop:16,padding:12,borderRadius:24}} onClick={() => setChef(null)}>清除今日厨师</button>
             )}
           </div>
         </div>
       )}
 
-      {/* 模态：购物清单 */}
       {showShopModal && (
         <div className="modal-overlay" onClick={() => setShowShopModal(false)}>
           <div className="modal-sheet" onClick={e => e.stopPropagation()}>
             <div className="modal-handle" />
             <div className="modal-title">🛒 今日购物清单</div>
-            <div style={{fontSize:13,color:'var(--text-3)',marginBottom:12}}>
-              根据 {todayMenu.length} 道菜自动汇总，共 {shoppingList.length} 项食材
-            </div>
+            <div style={{fontSize:13,color:'var(--text-3)',marginBottom:12}}>根据 {(todayState.menu||[]).length} 道菜自动汇总，共 {shoppingList.length} 项</div>
             {shoppingList.length === 0 ? (
               <div style={{color:'var(--text-3)',padding:'40px 0',textAlign:'center'}}>没有食材信息</div>
             ) : (
               <div style={{maxHeight:'55vh',overflowY:'auto'}}>
                 {shoppingList.map(item => (
                   <div key={item.name} className="shop-item" onClick={() => toggleShopCheck(item.name)}>
-                    <div className={`shop-check ${shopChecked[item.name] ? 'checked' : ''}`}>
-                      {shopChecked[item.name] && '✓'}
+                    <div className={`shop-check ${todayState.shopChecked?.[item.name] ? 'checked' : ''}`}>
+                      {todayState.shopChecked?.[item.name] && '✓'}
                     </div>
                     <div style={{flex:1}}>
-                      <div className={`shop-name ${shopChecked[item.name] ? 'checked' : ''}`}>{item.name}</div>
+                      <div className={`shop-name ${todayState.shopChecked?.[item.name] ? 'checked' : ''}`}>{item.name}</div>
                       <div className="shop-from">来自：{item.from.slice(0,3).join('、')}{item.from.length>3?'等':''}</div>
                     </div>
                   </div>
@@ -1100,7 +1074,7 @@ function TodayPage({ showToast, goPage }) {
             <button className="btn-outline" style={{width:'100%',marginTop:16,padding:12,borderRadius:24}} onClick={() => {
               const text = shoppingList.map(s => `□ ${s.name}`).join('\n');
               navigator.clipboard?.writeText(`今日购物清单（${todayStr()}）\n${text}`);
-              showToast('✓ 清单已复制，可粘贴到微信');
+              showToast('✓ 清单已复制');
             }}>📋 复制清单</button>
           </div>
         </div>
@@ -1110,31 +1084,46 @@ function TodayPage({ showToast, goPage }) {
 }
 
 // ===== 点菜页 =====
-function OrderPage({ showToast, goPage }) {
+function OrderPage({ data, kitchenId, showToast, goPage }) {
+  const { fb, user } = useFb();
+  const { dishes, todayState, votes, history, me } = data;
   const [search, setSearch] = useState('');
   const [activeCat, setActiveCat] = useState('all');
-  const [activeTag, setActiveTag] = useState(null); // 二级标签筛选
-  const [todayMenu, setTodayMenu] = useState(storage.get('fam_today_menu', []));
-  const [favorites, setFavorites] = useState(storage.get('fam_favorites', []));
-  const [votes, setVotes] = useState(storage.get('fam_votes', {}));
-  const [dishes, setDishes] = useState(storage.get('fam_dishes', SAMPLE_DISHES));
+  const [activeTag, setActiveTag] = useState(null);
   const [shaking, setShaking] = useState(false);
   const [shakeResult, setShakeResult] = useState(null);
-  const user = storage.get('fam_user', {});
-  const recentMap = useMemo(() => recentDishMap(), [todayMenu]);
 
-  useEffect(() => {
-    setDishes(storage.get('fam_dishes', SAMPLE_DISHES));
-    setTodayMenu(storage.get('fam_today_menu', []));
-  }, []);
+  // 近期吃过的菜（用于重复提醒）
+  const recentMap = useMemo(() => {
+    const map = {};
+    history.slice(0, 14).forEach(h => {
+      const days = daysBetween(h.date);
+      (h.dishes || []).forEach(d => {
+        if (!(d.id in map) || days < map[d.id]) map[d.id] = days;
+      });
+    });
+    return map;
+  }, [history]);
 
-  // 计算菜品的"想吃"优先级分数（用于置顶排序）
+  const isInMenu = (id) => (todayState.menu || []).some(d => d.id === id);
+  const myFavs = me?.favorites || [];
+  const isFav = (id) => myFavs.includes(id);
+
+  const getVote = (id) => {
+    const v = votes[id] || { up: [], down: [] };
+    return {
+      iVotedUp: (v.up||[]).includes(user.uid),
+      iVotedDown: (v.down||[]).includes(user.uid),
+      upCount: [...new Set(v.up||[])].length,
+      downCount: [...new Set(v.down||[])].length,
+    };
+  };
+
   const wantScore = (id) => {
     const v = votes[id];
     if (!v) return 0;
     const uniqUp = [...new Set(v.up || [])].length;
-    const iVotedUp = (v.up || []).includes(user.id);
-    // 两人都想吃：100；我投了想吃：50；别人投了想吃：每人 10
+    const iVotedUp = (v.up || []).includes(user.uid);
     let score = 0;
     if (uniqUp >= 2) score += 100;
     if (iVotedUp) score += 50;
@@ -1149,57 +1138,42 @@ function OrderPage({ showToast, goPage }) {
     const searchOk = !search || d.name.includes(search);
     return catOk && tagOk && searchOk;
   }).sort((a, b) => {
-    // 优先级：投了想吃的置顶
     const diff = wantScore(b.id) - wantScore(a.id);
     if (diff !== 0) return diff;
-    // 同分时按原 id 顺序保持稳定
-    return a.id - b.id;
+    return (a.id||'').localeCompare(b.id||'');
   });
 
-  const isInMenu = (id) => todayMenu.some(d => d.id === id);
-  const isFav = (id) => favorites.includes(id);
-  const getVote = (id) => {
-    const v = votes[id] || { up: [], down: [] };
-    return {
-      iVotedUp: v.up.includes(user.id),
-      iVotedDown: v.down.includes(user.id),
-      upCount: [...new Set(v.up)].length,
-      downCount: [...new Set(v.down)].length,
-    };
-  };
-
-  const toggleMenu = (dish) => {
+  const toggleMenu = async (dish) => {
     let updated;
     if (isInMenu(dish.id)) {
-      updated = todayMenu.filter(d => d.id !== dish.id);
+      updated = (todayState.menu || []).filter(d => d.id !== dish.id);
       showToast('已从今日菜单移除');
     } else {
-      updated = [...todayMenu, { id: dish.id, name: dish.name, emoji: dish.emoji, categoryId: dish.categoryId }];
+      updated = [...(todayState.menu || []), { id: dish.id, name: dish.name, emoji: dish.emoji, categoryId: dish.categoryId }];
       showToast('✓ 已加入今日菜单');
     }
-    storage.set('fam_today_menu', updated);
-    setTodayMenu(updated);
+    await fb.setDoc(fb.doc(fb.db, 'kitchens', kitchenId, 'today', 'state'), {
+      date: todayStr(), menu: updated, chef: todayState.chef || null, shopChecked: todayState.shopChecked || {}
+    });
   };
 
-  const toggleFav = (id) => {
-    const updated = isFav(id) ? favorites.filter(f => f !== id) : [...favorites, id];
-    storage.set('fam_favorites', updated);
-    setFavorites(updated);
+  const toggleFav = async (id) => {
+    if (!me) return;
+    const updated = isFav(id) ? myFavs.filter(f => f !== id) : [...myFavs, id];
+    await fb.updateDoc(fb.doc(fb.db, 'kitchens', kitchenId, 'members', user.uid), { favorites: updated });
   };
 
-  const handleVote = (id, type) => {
-    if (!user.id) { showToast('请先完成个人信息'); return; }
+  const handleVote = async (id, type) => {
+    if (!user) return;
+    const ref = fb.doc(fb.db, 'kitchens', kitchenId, 'votes', id);
     const v = votes[id] || { up: [], down: [] };
-    let up = v.up.filter(u => u !== user.id);
-    let down = v.down.filter(u => u !== user.id);
-    if (type === 'up' && !v.up.includes(user.id)) up.push(user.id);
-    if (type === 'down' && !v.down.includes(user.id)) down.push(user.id);
-    const updated = { ...votes, [id]: { up, down } };
-    setVotes(updated);
-    storage.set('fam_votes', updated);
+    let up = (v.up||[]).filter(u => u !== user.uid);
+    let down = (v.down||[]).filter(u => u !== user.uid);
+    if (type === 'up' && !(v.up||[]).includes(user.uid)) up.push(user.uid);
+    if (type === 'down' && !(v.down||[]).includes(user.uid)) down.push(user.uid);
+    await fb.setDoc(ref, { up, down }, { merge: true });
   };
 
-  // 摇一摇随机选菜
   const shakeIt = () => {
     if (shaking) return;
     setShaking(true);
@@ -1210,14 +1184,12 @@ function OrderPage({ showToast, goPage }) {
         const shuffled = [...list].sort(() => Math.random() - 0.5);
         return shuffled.slice(0, n);
       };
-      // 1荤1素1汤1主食，可能附加饮料/甜品
       const result = [
         ...pick('meat', 1),
         ...pick('veg', 1),
         ...pick('soup', 1),
         ...pick('staple', 1),
       ].filter(Boolean);
-      // 30% 概率加饮料，20% 加甜品
       if (Math.random() < 0.3) result.push(...pick('drink', 1));
       if (Math.random() < 0.2) result.push(...pick('dessert', 1));
       setShakeResult(result);
@@ -1225,20 +1197,20 @@ function OrderPage({ showToast, goPage }) {
     }, 700);
   };
 
-  const acceptShake = () => {
+  const acceptShake = async () => {
     if (!shakeResult) return;
     const newItems = shakeResult.filter(d => !isInMenu(d.id))
       .map(d => ({ id: d.id, name: d.name, emoji: d.emoji, categoryId: d.categoryId }));
-    const updated = [...todayMenu, ...newItems];
-    storage.set('fam_today_menu', updated);
-    setTodayMenu(updated);
+    const updated = [...(todayState.menu||[]), ...newItems];
+    await fb.setDoc(fb.doc(fb.db, 'kitchens', kitchenId, 'today', 'state'), {
+      date: todayStr(), menu: updated, chef: todayState.chef || null, shopChecked: todayState.shopChecked || {}
+    });
     showToast(`✓ ${newItems.length} 道菜已加入菜单`);
     setShakeResult(null);
   };
 
   return (
     <div className="page-scroll">
-      {/* 标题 */}
       <div className="page-header">
         <div style={{display:'flex',alignItems:'flex-end',justifyContent:'space-between'}}>
           <div>
@@ -1252,14 +1224,12 @@ function OrderPage({ showToast, goPage }) {
         </div>
       </div>
 
-      {/* 搜索栏 */}
       <div className="search-bar">
         <span style={{fontSize:18}}>🔍</span>
         <input placeholder="搜索菜品..." value={search} onChange={e => setSearch(e.target.value)} />
         {search && <span style={{cursor:'pointer',color:'var(--text-3)',fontSize:18}} onClick={() => setSearch('')}>×</span>}
       </div>
 
-      {/* 分类Tab */}
       <div className="tab-bar">
         {CATEGORIES.map(cat => (
           <div key={cat.id} className={`tab-chip ${activeCat === cat.id ? 'active' : ''}`} onClick={() => setActiveCat(cat.id)}>
@@ -1268,17 +1238,13 @@ function OrderPage({ showToast, goPage }) {
         ))}
       </div>
 
-      {/* 口味标签筛选 */}
       <div className="tab-bar" style={{paddingBottom: 8}}>
         <div className={`tab-chip ${!activeTag ? 'active' : ''}`} onClick={() => setActiveTag(null)} style={{fontSize:12,padding:'4px 12px'}}>不限口味</div>
         {TASTE_TAGS.map(t => (
-          <div key={t} className={`tab-chip ${activeTag === t ? 'active' : ''}`} onClick={() => setActiveTag(activeTag === t ? null : t)} style={{fontSize:12,padding:'4px 12px'}}>
-            #{t}
-          </div>
+          <div key={t} className={`tab-chip ${activeTag === t ? 'active' : ''}`} onClick={() => setActiveTag(activeTag === t ? null : t)} style={{fontSize:12,padding:'4px 12px'}}>#{t}</div>
         ))}
       </div>
 
-      {/* 摇一摇结果 */}
       {shakeResult && (
         <div style={{padding:'0 20px 12px'}}>
           <div className="shake-result-card">
@@ -1303,12 +1269,8 @@ function OrderPage({ showToast, goPage }) {
         </div>
       )}
 
-      {/* 菜品数量 */}
-      <div style={{padding:'0 20px 10px',fontSize:13,color:'var(--text-3)'}}>
-        共 {filtered.length} 道菜
-      </div>
+      <div style={{padding:'0 20px 10px',fontSize:13,color:'var(--text-3)'}}>共 {filtered.length} 道菜</div>
 
-      {/* 菜品网格 */}
       {filtered.length === 0 ? (
         <div className="empty-state"><div className="emoji">🔍</div><p>没有找到菜品</p></div>
       ) : (
@@ -1322,14 +1284,10 @@ function OrderPage({ showToast, goPage }) {
               <div key={dish.id} className="dish-card">
                 {inMenu && <div className="dish-badge">✓ 已选</div>}
                 {showRecent && !inMenu && (
-                  <div className="dish-recent-warn">
-                    {recentDays === 0 ? '今天吃过' : `${recentDays}天前吃过`}
-                  </div>
+                  <div className="dish-recent-warn">{recentDays === 0 ? '今天吃过' : `${recentDays}天前吃过`}</div>
                 )}
                 <div className="dish-img">
-                  {dish.image
-                    ? <img src={dish.image} alt={dish.name} style={{width:'100%',height:'100%',objectFit:'cover'}} />
-                    : dish.emoji}
+                  {dish.image ? <img src={dish.image} alt={dish.name} /> : dish.emoji}
                   {v.upCount >= 2 ? (
                     <div className="dish-both-want">💕 两人都想吃</div>
                   ) : v.iVotedUp ? (
@@ -1343,27 +1301,14 @@ function OrderPage({ showToast, goPage }) {
                   <div className="dish-meta">
                     <span className="dish-cat">{CATEGORIES.find(c=>c.id===dish.categoryId)?.icon} {CATEGORIES.find(c=>c.id===dish.categoryId)?.name}</span>
                     {dish.spicy > 0 && <SpicyTag level={dish.spicy} />}
-                    {(dish.tags || []).slice(0,1).map(t => (
-                      <span key={t} className="tag-mini">#{t}</span>
-                    ))}
+                    {(dish.tags || []).slice(0,1).map(t => <span key={t} className="tag-mini">#{t}</span>)}
                   </div>
                   <div className="dish-actions">
                     <div className="dish-vote">
-                      <span
-                        className={`vote-btn up ${v.iVotedUp ? 'active' : ''}`}
-                        onClick={(e) => { e.stopPropagation(); handleVote(dish.id, 'up'); }}
-                      >👍 {v.upCount || ''}</span>
-                      <span
-                        className={`vote-btn down ${v.iVotedDown ? 'active' : ''}`}
-                        onClick={(e) => { e.stopPropagation(); handleVote(dish.id, 'down'); }}
-                      >👎 {v.downCount || ''}</span>
+                      <span className={`vote-btn up ${v.iVotedUp ? 'active' : ''}`} onClick={(e) => { e.stopPropagation(); handleVote(dish.id, 'up'); }}>👍 {v.upCount || ''}</span>
+                      <span className={`vote-btn down ${v.iVotedDown ? 'active' : ''}`} onClick={(e) => { e.stopPropagation(); handleVote(dish.id, 'down'); }}>👎 {v.downCount || ''}</span>
                     </div>
-                    <button
-                      className={`btn-add ${inMenu ? 'added' : ''}`}
-                      onClick={() => toggleMenu(dish)}
-                    >
-                      {inMenu ? '✓' : '+'}
-                    </button>
+                    <button className={`btn-add ${inMenu ? 'added' : ''}`} onClick={() => toggleMenu(dish)}>{inMenu ? '✓' : '+'}</button>
                   </div>
                 </div>
               </div>
@@ -1372,16 +1317,13 @@ function OrderPage({ showToast, goPage }) {
         </div>
       )}
 
-      {/* 悬浮购物栏 */}
-      {todayMenu.length > 0 && (
+      {(todayState.menu || []).length > 0 && (
         <div className="float-bar">
           <div className="float-bar-left">
-            <div className="float-count">{todayMenu.length}</div>
-            <div className="float-label">已选 {todayMenu.length} 道菜</div>
+            <div className="float-count">{(todayState.menu || []).length}</div>
+            <div className="float-label">已选 {(todayState.menu || []).length} 道菜</div>
           </div>
-          <button className="float-btn" onClick={() => goPage && goPage('today')}>
-            查看菜单
-          </button>
+          <button className="float-btn" onClick={() => goPage && goPage('today')}>查看菜单</button>
         </div>
       )}
     </div>
@@ -1389,15 +1331,13 @@ function OrderPage({ showToast, goPage }) {
 }
 
 // ===== 食记页 =====
-function HistoryPage({ showToast }) {
-  const [history, setHistory] = useState(storage.get('fam_history', []));
+function HistoryPage({ data, kitchenId, showToast }) {
+  const { fb } = useFb();
+  const { history, members } = data;
   const [expanded, setExpanded] = useState(null);
-  const members = storage.get('fam_members', []);
 
-  const setRating = (date, rating) => {
-    const updated = history.map(h => h.date === date ? { ...h, rating } : h);
-    setHistory(updated);
-    storage.set('fam_history', updated);
+  const setRating = async (date, rating) => {
+    await fb.updateDoc(fb.doc(fb.db, 'kitchens', kitchenId, 'history', date), { rating });
     showToast(`✓ 评分 ${rating} 星`);
   };
 
@@ -1440,16 +1380,12 @@ function HistoryPage({ showToast }) {
               {expanded === h.date && (
                 <>
                   <div className="history-dishes">
-                    {h.dishes.map(d => (
-                      <span key={d.id} className="dish-tag">{d.emoji} {d.name}</span>
-                    ))}
+                    {h.dishes.map(d => <span key={d.id} className="dish-tag">{d.emoji} {d.name}</span>)}
                   </div>
                   <div className="history-rating">
                     <span style={{fontSize:13,color:'var(--text-2)',fontWeight:600}}>这桌怎么样：</span>
                     {[1,2,3,4,5].map(n => (
-                      <button key={n} className={`star-btn ${(h.rating||0) >= n ? 'filled' : ''}`} onClick={() => setRating(h.date, n)}>
-                        ⭐
-                      </button>
+                      <button key={n} className={`star-btn ${(h.rating||0) >= n ? 'filled' : ''}`} onClick={() => setRating(h.date, n)}>⭐</button>
                     ))}
                     {h.rating > 0 && <span className="history-rating-label">{h.rating} / 5</span>}
                   </div>
@@ -1463,7 +1399,7 @@ function HistoryPage({ showToast }) {
   );
 }
 
-// ===== 图片压缩工具 =====
+// ===== 图片压缩 =====
 function compressImage(file, maxW = 600) {
   return new Promise((resolve) => {
     const reader = new FileReader();
@@ -1484,26 +1420,29 @@ function compressImage(file, maxW = 600) {
   });
 }
 
-const AVATAR_EMOJIS = ['👨‍🍳','👩‍🍳','😊','😄','🧑','👴','👵','🧓','🧑‍🦱','🧑‍🦳','🧑‍🦲','😎','🤗','😋','🥰','🤩','👶','🧒','👧','👦'];
-
 // ===== 厨房管理页 =====
-function KitchenPage({ showToast }) {
-  const [modal, setModal] = useState(null);
-  const [dishes, setDishes] = useState(storage.get('fam_dishes', SAMPLE_DISHES));
-  const [userData, setUserData] = useState(storage.get('fam_user', {}));
-  const kitchen = storage.get('fam_kitchen', {});
-  const members = storage.get('fam_members', []);
-  const isAdmin = userData.role === 'admin';
+function KitchenPage({ data, kitchenId, showToast, onLeave }) {
+  const { fb, user } = useFb();
+  const { kitchen, members, dishes, me } = data;
+  const isAdmin = me?.role === 'admin';
 
+  const [modal, setModal] = useState(null);
   const [newDish, setNewDish] = useState({ name: '', categoryId: 'meat', emoji: '🍖', ingredients: '', image: '', spicy: 0, tags: [] });
   const [dishImgLoading, setDishImgLoading] = useState(false);
   const dishImgInputRef = useRef(null);
   const EMOJIS = ['🍖','🥩','🐟','🍗','🦐','🥬','🥦','🍅','🧅','🥚','🧆','🍲','🍜','🍚','🥘','🥗','🥤','🍺','☕','🥛','🍰','🍮','🍦','🍓'];
 
   const [avatarTab, setAvatarTab] = useState('emoji');
-  const [avatarPreview, setAvatarPreview] = useState(userData.avatarImg || '');
-  const [avatarEmoji, setAvatarEmoji] = useState(userData.emoji || '😊');
+  const [avatarPreview, setAvatarPreview] = useState('');
+  const [avatarEmoji, setAvatarEmoji] = useState('😊');
   const avatarInputRef = useRef(null);
+
+  const openAvatarModal = () => {
+    setAvatarTab(me?.avatarImg ? 'photo' : 'emoji');
+    setAvatarPreview(me?.avatarImg || '');
+    setAvatarEmoji(me?.emoji || '😊');
+    setModal('avatar');
+  };
 
   const handleDishImageChange = async (e) => {
     const file = e.target.files?.[0];
@@ -1513,7 +1452,7 @@ function KitchenPage({ showToast }) {
     try {
       const compressed = await compressImage(file, 600);
       setNewDish(prev => ({ ...prev, image: compressed }));
-    } catch { showToast('图片处理失败，请重试'); }
+    } catch { showToast('图片处理失败'); }
     setDishImgLoading(false);
     e.target.value = '';
   };
@@ -1521,56 +1460,52 @@ function KitchenPage({ showToast }) {
   const handleAvatarImageChange = async (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
-    if (file.size > 15 * 1024 * 1024) { showToast('图片太大，请选15MB以内的图片'); return; }
+    if (file.size > 15 * 1024 * 1024) { showToast('图片太大'); return; }
     try {
       const compressed = await compressImage(file, 400);
       setAvatarPreview(compressed);
-    } catch { showToast('图片处理失败，请重试'); }
+    } catch { showToast('图片处理失败'); }
     e.target.value = '';
   };
 
-  const saveAvatar = () => {
-    const updated = {
-      ...userData,
-      emoji: avatarEmoji,
-      avatarImg: avatarTab === 'photo' ? avatarPreview : '',
-    };
-    storage.set('fam_user', updated);
-    // 同步更新成员列表中的我
-    const ms = storage.get('fam_members', []);
-    const updatedMs = ms.map(m => m.id === userData.id ? { ...m, emoji: avatarEmoji, avatarImg: updated.avatarImg } : m);
-    storage.set('fam_members', updatedMs);
-    setUserData(updated);
-    setModal(null);
-    showToast('✓ 头像已更新');
+  const saveAvatar = async () => {
+    try {
+      await fb.updateDoc(fb.doc(fb.db, 'kitchens', kitchenId, 'members', user.uid), {
+        emoji: avatarEmoji,
+        avatarImg: avatarTab === 'photo' ? avatarPreview : '',
+      });
+      setModal(null);
+      showToast('✓ 头像已更新');
+    } catch (e) { showToast('保存失败：'+e.message); }
   };
 
-  const addDish = () => {
+  const addDish = async () => {
     if (!newDish.name.trim()) { showToast('请输入菜品名称'); return; }
-    const dish = {
-      id: Date.now(),
-      name: newDish.name.trim(),
-      categoryId: newDish.categoryId,
-      emoji: newDish.emoji,
-      image: newDish.image || '',
-      spicy: newDish.spicy || 0,
-      tags: newDish.tags || [],
-      ingredients: newDish.ingredients.split(/[，,]/).map(s=>s.trim()).filter(Boolean),
-    };
-    const updated = [...dishes, dish];
-    storage.set('fam_dishes', updated);
-    setDishes(updated);
-    setNewDish({ name: '', categoryId: 'meat', emoji: '🍖', ingredients: '', image: '', spicy: 0, tags: [] });
-    setModal(null);
-    showToast('✓ 菜品已添加');
+    try {
+      const dishId = 'd' + Date.now();
+      const dish = {
+        id: dishId,
+        name: newDish.name.trim(),
+        categoryId: newDish.categoryId,
+        emoji: newDish.emoji,
+        image: newDish.image || '',
+        spicy: newDish.spicy || 0,
+        tags: newDish.tags || [],
+        ingredients: newDish.ingredients.split(/[，,]/).map(s=>s.trim()).filter(Boolean),
+      };
+      await fb.setDoc(fb.doc(fb.db, 'kitchens', kitchenId, 'dishes', dishId), dish);
+      setNewDish({ name: '', categoryId: 'meat', emoji: '🍖', ingredients: '', image: '', spicy: 0, tags: [] });
+      setModal(null);
+      showToast('✓ 菜品已添加');
+    } catch (e) { showToast('添加失败：'+e.message); }
   };
 
-  const deleteDish = (id) => {
+  const deleteDish = async (id) => {
     if (!window.confirm('确定删除这道菜吗？')) return;
-    const updated = dishes.filter(d => d.id !== id);
-    storage.set('fam_dishes', updated);
-    setDishes(updated);
-    showToast('已删除');
+    try {
+      await fb.deleteDoc(fb.doc(fb.db, 'kitchens', kitchenId, 'dishes', id));
+      showToast('已删除');
+    } catch (e) { showToast('删除失败：'+e.message); }
   };
 
   const toggleNewDishTag = (tag) => {
@@ -1579,36 +1514,24 @@ function KitchenPage({ showToast }) {
     setNewDish({ ...newDish, tags: updated });
   };
 
-  const currentAvatarImg = userData.avatarImg;
-  const currentAvatarEmoji = userData.emoji || '😊';
-
   return (
     <div className="page-scroll">
-
-      {/* 个人信息 */}
       <div style={{padding:'20px 20px 0',display:'flex',alignItems:'center',gap:16,marginBottom:20}}>
-        <div
-          className="kitchen-avatar"
-          style={{cursor:'pointer',position:'relative',overflow:'hidden',border:'2.5px solid var(--primary-soft)'}}
-          onClick={() => { setAvatarTab('emoji'); setAvatarPreview(userData.avatarImg||''); setAvatarEmoji(userData.emoji||'😊'); setModal('avatar'); }}
-        >
-          {currentAvatarImg
-            ? <img src={currentAvatarImg} alt="头像" style={{width:'100%',height:'100%',objectFit:'cover'}} />
-            : currentAvatarEmoji}
-          <div style={{position:'absolute',bottom:0,left:0,right:0,background:'rgba(0,0,0,0.3)',color:'white',fontSize:10,textAlign:'center',padding:'3px 0',lineHeight:1.2}}>
-            换头像
-          </div>
+        <div className="kitchen-avatar" style={{cursor:'pointer',position:'relative',overflow:'hidden',border:'2.5px solid var(--primary-soft)'}} onClick={openAvatarModal}>
+          {me?.avatarImg
+            ? <img src={me.avatarImg} alt="头像" style={{width:'100%',height:'100%',objectFit:'cover'}} />
+            : (me?.emoji || '😊')}
+          <div style={{position:'absolute',bottom:0,left:0,right:0,background:'rgba(0,0,0,0.3)',color:'white',fontSize:10,textAlign:'center',padding:'3px 0',lineHeight:1.2}}>换头像</div>
         </div>
         <div>
-          <div style={{fontSize:18,fontWeight:700}}>{userData.name || '家庭成员'}</div>
-          <div style={{display:'flex',gap:6,marginTop:4}}>
+          <div style={{fontSize:18,fontWeight:700}}>{me?.name || '家庭成员'}</div>
+          <div style={{display:'flex',gap:6,marginTop:4,alignItems:'center'}}>
             <span className={isAdmin?'tag-admin':'tag-member'}>{isAdmin?'管理员':'成员'}</span>
-            <span style={{fontSize:12,color:'var(--text-3)'}}>{kitchen.name}</span>
+            <span style={{fontSize:12,color:'var(--text-3)'}}>{kitchen?.name}</span>
           </div>
         </div>
       </div>
 
-      {/* 厨房管理（仅管理员）*/}
       {isAdmin && (
         <>
           <div style={{padding:'0 20px 8px',fontSize:13,color:'var(--text-3)',fontWeight:600}}>厨房管理</div>
@@ -1641,18 +1564,31 @@ function KitchenPage({ showToast }) {
 
       <div style={{padding:'0 20px 8px',fontSize:13,color:'var(--text-3)',fontWeight:600}}>我的</div>
       <div className="kitchen-card">
-        <div className="kitchen-row" onClick={() => { setAvatarTab('emoji'); setAvatarPreview(userData.avatarImg||''); setAvatarEmoji(userData.emoji||'😊'); setModal('avatar'); }}>
+        <div className="kitchen-row" onClick={openAvatarModal}>
           <span className="kitchen-row-icon">🖼️</span>
           <span className="kitchen-row-text">更换头像</span>
           <span className="kitchen-row-arrow">›</span>
         </div>
-        <div className="kitchen-row" onClick={() => { const favs = storage.get('fam_favorites',[]); showToast(`已收藏 ${favs.length} 道菜`); }}>
+        <div className="kitchen-row" onClick={() => showToast(`已收藏 ${(me?.favorites||[]).length} 道菜`)}>
           <span className="kitchen-row-icon">❤️</span>
           <span className="kitchen-row-text">我的收藏</span>
-          <span className="kitchen-row-badge">{storage.get('fam_favorites',[]).length} 道</span>
+          <span className="kitchen-row-badge">{(me?.favorites||[]).length} 道</span>
           <span className="kitchen-row-arrow">›</span>
         </div>
-        <div className="kitchen-row" onClick={() => { if(window.confirm('确定退出并清除数据？')) { localStorage.clear(); location.reload(); } }}>
+        {!isAdmin && (
+          <div className="kitchen-row" onClick={() => setModal('invite')}>
+            <span className="kitchen-row-icon">🔑</span>
+            <span className="kitchen-row-text">查看邀请码</span>
+            <span className="kitchen-row-arrow">›</span>
+          </div>
+        )}
+        <div className="kitchen-row" onClick={async () => {
+          if(window.confirm('确定退出当前厨房？数据仍保留在云端，重新加入还能看到。')) {
+            localPref.clear();
+            try { await fb.setDoc(fb.doc(fb.db, 'users', user.uid), { currentKitchenId: null }, { merge: true }); } catch {}
+            onLeave();
+          }
+        }}>
           <span className="kitchen-row-icon">🚪</span>
           <span className="kitchen-row-text" style={{color:'#999'}}>退出厨房</span>
           <span className="kitchen-row-arrow">›</span>
@@ -1660,7 +1596,7 @@ function KitchenPage({ showToast }) {
       </div>
 
       <div style={{padding:'20px',fontSize:13,color:'var(--text-3)',textAlign:'center'}}>
-        家厨点菜 · 让每天吃饭更快乐 🥢
+        家厨点菜 · 云端实时同步 ☁️
       </div>
 
       {/* 更换头像 modal */}
@@ -1674,13 +1610,9 @@ function KitchenPage({ showToast }) {
                 {avatarTab === 'photo' && avatarPreview
                   ? <img src={avatarPreview} alt="预览" />
                   : <span style={{fontSize:42}}>{avatarEmoji}</span>}
-                {avatarTab === 'photo' && (
-                  <div className="avatar-large-overlay">📷</div>
-                )}
+                {avatarTab === 'photo' && <div className="avatar-large-overlay">📷</div>}
               </div>
-              <div style={{fontSize:12,color:'var(--text-3)'}}>
-                {avatarTab === 'photo' ? '点击头像更换照片' : '在下方选择一个表情'}
-              </div>
+              <div style={{fontSize:12,color:'var(--text-3)'}}>{avatarTab === 'photo' ? '点击头像更换照片' : '在下方选择一个表情'}</div>
             </div>
             <div className="avatar-tab-row" style={{marginBottom:16}}>
               <div className={`avatar-tab ${avatarTab==='emoji'?'active':''}`} onClick={() => setAvatarTab('emoji')}>😊 表情头像</div>
@@ -1689,29 +1621,19 @@ function KitchenPage({ showToast }) {
             {avatarTab === 'emoji' && (
               <div className="emoji-grid" style={{marginBottom:20}}>
                 {AVATAR_EMOJIS.map(em => (
-                  <div key={em} className={`emoji-opt ${avatarEmoji===em?'selected':''}`} onClick={() => setAvatarEmoji(em)}>
-                    {em}
-                  </div>
+                  <div key={em} className={`emoji-opt ${avatarEmoji===em?'selected':''}`} onClick={() => setAvatarEmoji(em)}>{em}</div>
                 ))}
               </div>
             )}
             {avatarTab === 'photo' && (
               <div style={{marginBottom:20}}>
-                <input
-                  ref={avatarInputRef}
-                  type="file"
-                  accept="image/*"
-                  className="file-input-hidden"
-                  onChange={handleAvatarImageChange}
-                />
+                <input ref={avatarInputRef} type="file" accept="image/*" className="file-input-hidden" onChange={handleAvatarImageChange} />
                 {avatarPreview ? (
                   <div style={{display:'flex',flexDirection:'column',alignItems:'center',gap:12}}>
                     <div style={{width:120,height:120,borderRadius:'50%',overflow:'hidden',border:'3px solid var(--primary-soft)'}}>
                       <img src={avatarPreview} style={{width:'100%',height:'100%',objectFit:'cover'}} />
                     </div>
-                    <button className="btn-outline" onClick={() => avatarInputRef.current?.click()}>
-                      重新选择照片
-                    </button>
+                    <button className="btn-outline" onClick={() => avatarInputRef.current?.click()}>重新选择照片</button>
                   </div>
                 ) : (
                   <div className="img-upload-box" style={{aspectRatio:'unset',height:140}} onClick={() => avatarInputRef.current?.click()}>
@@ -1727,27 +1649,16 @@ function KitchenPage({ showToast }) {
         </div>
       )}
 
-      {/* 添加菜品 modal */}
+      {/* 添加菜品 */}
       {modal === 'addDish' && (
         <div className="modal-overlay" onClick={() => setModal(null)}>
           <div className="modal-sheet" onClick={e => e.stopPropagation()}>
             <div className="modal-handle" />
             <div className="modal-title">添加新菜品</div>
-
             <div className="input-group">
               <div className="input-label">菜品图片（可选）</div>
-              <input
-                ref={dishImgInputRef}
-                type="file"
-                accept="image/*"
-                className="file-input-hidden"
-                onChange={handleDishImageChange}
-              />
-              <div
-                className={`img-upload-box ${newDish.image ? 'has-img' : ''}`}
-                style={{maxWidth:160,aspectRatio:'1'}}
-                onClick={() => dishImgInputRef.current?.click()}
-              >
+              <input ref={dishImgInputRef} type="file" accept="image/*" className="file-input-hidden" onChange={handleDishImageChange} />
+              <div className={`img-upload-box ${newDish.image ? 'has-img' : ''}`} style={{maxWidth:160,aspectRatio:'1'}} onClick={() => dishImgInputRef.current?.click()}>
                 {dishImgLoading ? (
                   <div style={{color:'var(--text-3)',fontSize:13}}>处理中…</div>
                 ) : newDish.image ? (
@@ -1764,12 +1675,10 @@ function KitchenPage({ showToast }) {
                 )}
               </div>
             </div>
-
             <div className="input-group">
               <div className="input-label">菜品名称 *</div>
               <input className="input-field" placeholder="例：红烧肉" value={newDish.name} onChange={e=>setNewDish({...newDish,name:e.target.value})} />
             </div>
-
             <div className="input-group">
               <div className="input-label">选择分类</div>
               <div className="cat-select-grid">
@@ -1781,56 +1690,40 @@ function KitchenPage({ showToast }) {
                 ))}
               </div>
             </div>
-
             <div className="input-group">
               <div className="input-label">辣度</div>
               <div className="spicy-row">
                 {SPICY_LEVELS.map(s => (
-                  <div key={s.level} className={`spicy-opt ${newDish.spicy===s.level?'selected':''}`} onClick={() => setNewDish({...newDish, spicy:s.level})}>
-                    {s.icon || '○'} {s.name}
-                  </div>
+                  <div key={s.level} className={`spicy-opt ${newDish.spicy===s.level?'selected':''}`} onClick={() => setNewDish({...newDish, spicy:s.level})}>{s.icon || '○'} {s.name}</div>
                 ))}
               </div>
             </div>
-
             <div className="input-group">
               <div className="input-label">口味标签（可多选）</div>
               <div className="tag-pick-row">
                 {TASTE_TAGS.map(t => (
-                  <div key={t} className={`tag-pick ${(newDish.tags||[]).includes(t)?'selected':''}`} onClick={() => toggleNewDishTag(t)}>
-                    {t}
-                  </div>
+                  <div key={t} className={`tag-pick ${(newDish.tags||[]).includes(t)?'selected':''}`} onClick={() => toggleNewDishTag(t)}>{t}</div>
                 ))}
               </div>
             </div>
-
             <div className="input-group">
               <div className="input-label">备用 Emoji 图标</div>
               <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
                 {EMOJIS.map(em => (
-                  <div key={em} onClick={() => setNewDish({...newDish,emoji:em})}
-                    style={{fontSize:24,cursor:'pointer',padding:6,borderRadius:8,
-                      background:newDish.emoji===em?'var(--primary-light)':'transparent',
-                      border:newDish.emoji===em?'1.5px solid var(--primary)':'1.5px solid transparent'}}>
-                    {em}
-                  </div>
+                  <div key={em} onClick={() => setNewDish({...newDish,emoji:em})} style={{fontSize:24,cursor:'pointer',padding:6,borderRadius:8,background:newDish.emoji===em?'var(--primary-light)':'transparent',border:newDish.emoji===em?'1.5px solid var(--primary)':'1.5px solid transparent'}}>{em}</div>
                 ))}
               </div>
             </div>
-
             <div className="input-group">
               <div className="input-label">食材（逗号分隔，自动汇总成购物清单）</div>
               <input className="input-field" placeholder="例：猪肉，酱油，冰糖" value={newDish.ingredients} onChange={e=>setNewDish({...newDish,ingredients:e.target.value})} />
             </div>
-
-            <button className="btn-primary" onClick={addDish} disabled={dishImgLoading}>
-              {dishImgLoading ? '图片处理中…' : '添加菜品'}
-            </button>
+            <button className="btn-primary" onClick={addDish} disabled={dishImgLoading}>{dishImgLoading ? '图片处理中…' : '添加菜品'}</button>
           </div>
         </div>
       )}
 
-      {/* 管理菜品 modal */}
+      {/* 管理菜品 */}
       {modal === 'manageDishes' && (
         <div className="modal-overlay" onClick={() => setModal(null)}>
           <div className="modal-sheet" onClick={e => e.stopPropagation()}>
@@ -1840,9 +1733,7 @@ function KitchenPage({ showToast }) {
               {dishes.map(d => (
                 <div key={d.id} className="member-row">
                   {d.image
-                    ? <div style={{width:40,height:40,borderRadius:8,overflow:'hidden',flexShrink:0}}>
-                        <img src={d.image} style={{width:'100%',height:'100%',objectFit:'cover'}} />
-                      </div>
+                    ? <div style={{width:40,height:40,borderRadius:8,overflow:'hidden',flexShrink:0}}><img src={d.image} style={{width:'100%',height:'100%',objectFit:'cover'}} /></div>
                     : <span style={{fontSize:28,flexShrink:0}}>{d.emoji}</span>}
                   <div className="member-name">
                     <div style={{fontWeight:600}}>{d.name} {d.spicy > 0 && <SpicyTag level={d.spicy} />}</div>
@@ -1859,7 +1750,7 @@ function KitchenPage({ showToast }) {
         </div>
       )}
 
-      {/* 邀请码 modal */}
+      {/* 邀请码 */}
       {modal === 'invite' && (
         <div className="modal-overlay" onClick={() => setModal(null)}>
           <div className="modal-sheet" onClick={e => e.stopPropagation()}>
@@ -1867,17 +1758,15 @@ function KitchenPage({ showToast }) {
             <div className="modal-title">邀请家人加入</div>
             <div className="invite-code-box">
               <div style={{fontSize:13,color:'var(--text-3)',marginBottom:8}}>把邀请码发给家人</div>
-              <div className="invite-code">{kitchen.inviteCode}</div>
+              <div className="invite-code">{kitchen?.inviteCode}</div>
               <div className="invite-hint">家人打开应用后输入此邀请码即可加入</div>
             </div>
-            <button className="btn-primary" onClick={() => { navigator.clipboard?.writeText(kitchen.inviteCode); showToast('✓ 邀请码已复制'); }}>
-              复制邀请码
-            </button>
+            <button className="btn-primary" onClick={() => { navigator.clipboard?.writeText(kitchen?.inviteCode || ''); showToast('✓ 邀请码已复制'); }}>复制邀请码</button>
           </div>
         </div>
       )}
 
-      {/* 成员 modal */}
+      {/* 成员 */}
       {modal === 'members' && (
         <div className="modal-overlay" onClick={() => setModal(null)}>
           <div className="modal-sheet" onClick={e => e.stopPropagation()}>
@@ -1890,7 +1779,7 @@ function KitchenPage({ showToast }) {
                     ? <img src={m.avatarImg} style={{width:'100%',height:'100%',objectFit:'cover',borderRadius:'50%'}} />
                     : m.emoji}
                 </div>
-                <div className="member-name">{m.name}</div>
+                <div className="member-name">{m.name}{m.id === user?.uid && ' (我)'}</div>
                 <span className={m.role==='admin'?'tag-admin':'tag-member'}>{m.role==='admin'?'管理员':'成员'}</span>
               </div>
             ))}
@@ -1902,11 +1791,13 @@ function KitchenPage({ showToast }) {
 }
 
 // ===== 主应用 =====
-function App() {
-  const [inited, setInited] = useState(!!storage.get('fam_user', null));
+function AppInner() {
+  const { fb, user, authReady } = useFb();
+  const [kitchenId, setKitchenId] = useState(() => localPref.get('fam_kitchen_id', null));
   const [page, setPage] = useState('today');
   const [toast, setToast] = useState('');
   const toastTimer = useRef(null);
+  const [checkingMembership, setCheckingMembership] = useState(true);
 
   const showToast = useCallback((msg) => {
     setToast(msg);
@@ -1914,13 +1805,68 @@ function App() {
     toastTimer.current = setTimeout(() => setToast(''), 2100);
   }, []);
 
+  // 登录后：从 users/{uid} 拿当前厨房 ID（处理跨设备登录）
+  useEffect(() => {
+    if (!fb || !user) return;
+    (async () => {
+      try {
+        const localId = localPref.get('fam_kitchen_id', null);
+        // 检查本地缓存的厨房 ID 是否仍是该用户的成员
+        if (localId) {
+          const memSnap = await fb.getDoc(fb.doc(fb.db, 'kitchens', localId, 'members', user.uid));
+          if (memSnap.exists()) {
+            setKitchenId(localId);
+            setCheckingMembership(false);
+            return;
+          }
+        }
+        // 本地没有 → 查 users/{uid}
+        const userDoc = await fb.getDoc(fb.doc(fb.db, 'users', user.uid));
+        if (userDoc.exists() && userDoc.data().currentKitchenId) {
+          const cid = userDoc.data().currentKitchenId;
+          // 检查仍是成员
+          const memSnap = await fb.getDoc(fb.doc(fb.db, 'kitchens', cid, 'members', user.uid));
+          if (memSnap.exists()) {
+            localPref.set('fam_kitchen_id', cid);
+            setKitchenId(cid);
+          } else {
+            setKitchenId(null);
+          }
+        } else {
+          setKitchenId(null);
+        }
+      } catch (e) {
+        console.error(e);
+        setKitchenId(null);
+      }
+      setCheckingMembership(false);
+    })();
+  }, [fb, user]);
+
   const goPage = useCallback((p) => setPage(p), []);
 
-  if (!inited) return (
-    <div style={{display:'flex',flexDirection:'column',height:'100%',maxWidth:430,margin:'0 auto',background:'white'}}>
-      <OnboardPage onDone={() => setInited(true)} />
-    </div>
-  );
+  if (!authReady || checkingMembership) {
+    return (
+      <div style={{display:'flex',flexDirection:'column',height:'100%',maxWidth:430,margin:'0 auto',background:'white'}}>
+        <FullLoading text={authReady ? '正在加载厨房...' : '正在登录...'} />
+      </div>
+    );
+  }
+
+  if (!kitchenId) {
+    return (
+      <div style={{display:'flex',flexDirection:'column',height:'100%',maxWidth:430,margin:'0 auto',background:'white'}}>
+        <Toast msg={toast} />
+        <OnboardPage onJoined={(id) => setKitchenId(id)} showToast={showToast} />
+      </div>
+    );
+  }
+
+  return <MainApp kitchenId={kitchenId} page={page} setPage={setPage} goPage={goPage} showToast={showToast} toast={toast} onLeave={() => setKitchenId(null)} />;
+}
+
+function MainApp({ kitchenId, page, setPage, goPage, showToast, toast, onLeave }) {
+  const data = useKitchenData(kitchenId);
 
   const NAV = [
     { id: 'today', icon: '🏠', label: '今日' },
@@ -1929,13 +1875,22 @@ function App() {
     { id: 'kitchen', icon: '👨‍🍳', label: '厨房' },
   ];
 
+  if (!data.allLoaded) {
+    return (
+      <div style={{display:'flex',flexDirection:'column',height:'100%',maxWidth:430,margin:'0 auto',background:'white'}}>
+        <Toast msg={toast} />
+        <FullLoading text="正在同步厨房数据..." />
+      </div>
+    );
+  }
+
   return (
     <>
       <Toast msg={toast} />
-      {page === 'today' && <TodayPage showToast={showToast} goPage={goPage} />}
-      {page === 'order' && <OrderPage showToast={showToast} goPage={goPage} />}
-      {page === 'history' && <HistoryPage showToast={showToast} />}
-      {page === 'kitchen' && <KitchenPage showToast={showToast} />}
+      {page === 'today' && <TodayPage data={data} kitchenId={kitchenId} showToast={showToast} goPage={goPage} />}
+      {page === 'order' && <OrderPage data={data} kitchenId={kitchenId} showToast={showToast} goPage={goPage} />}
+      {page === 'history' && <HistoryPage data={data} kitchenId={kitchenId} showToast={showToast} />}
+      {page === 'kitchen' && <KitchenPage data={data} kitchenId={kitchenId} showToast={showToast} onLeave={onLeave} />}
       <div className="bottom-nav">
         {NAV.map(n => (
           <div key={n.id} className={`nav-item ${page === n.id ? 'active' : ''}`} onClick={() => setPage(n.id)}>
@@ -1945,6 +1900,14 @@ function App() {
         ))}
       </div>
     </>
+  );
+}
+
+function App() {
+  return (
+    <FirebaseProvider>
+      <AppInner />
+    </FirebaseProvider>
   );
 }
 
